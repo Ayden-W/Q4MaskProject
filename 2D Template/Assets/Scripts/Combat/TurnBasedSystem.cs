@@ -1,39 +1,40 @@
 using System.Collections;
+using Unity.Android.Gradle.Manifest;
 using UnityEngine;
+using UnityEngine.UI;
 
+public BattleHUD playerHUD;
+public BattleHUD enemyHUD;
+public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 
-/*public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
-
-
-abstract class TurnBased : MonoBehaviour
+abstract class TurnBasedSystem : MonoBehaviour
 {
-    
-
-
-
-    public GameObject playerPrefab;
+  /*  public GameObject playerPrefab;
     public GameObject enemyPrefab;
-
     public Transform playerBattleStation;
     public Transform enemyBattleStation;
+    public Text dialogueText;
+    public GameObject playerHUD;
+    public GameObject enemyHUD;
+    public BattleState state;
+    
+   
 
     Unit playerUnit;
     Unit enemyUnit;
 
-    public Text dialogueText;
-
-    public BattleHUD playerHUD;
-    public BattleHUD enemyHUD;
-
-    public BattleState state;
-
-    // Start is called before the first frame update
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         state = BattleState.START;
         StartCoroutine(SetupBattle());
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
     IEnumerator SetupBattle()
     {
         GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
@@ -41,9 +42,9 @@ abstract class TurnBased : MonoBehaviour
 
         GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
         enemyUnit = enemyGO.GetComponent<Unit>();
-
         
-        playerHUD.SetHUD(playerUnit);
+
+         playerHUD.SetHUD(playerUnit);
         enemyHUD.SetHUD(enemyUnit);
 
         yield return new WaitForSeconds(2f);
@@ -143,6 +144,5 @@ abstract class TurnBased : MonoBehaviour
 
         StartCoroutine(PlayerHeal());
     }
-
-
-}*/
+  */
+}
