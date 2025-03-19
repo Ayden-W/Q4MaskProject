@@ -3,8 +3,8 @@ using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 using UnityEngine.UI;
 
-public BattleHUD playerHUD;
-public BattleHUD enemyHUD;
+//public BattleHUD playerHUD;
+//public BattleHUD enemyHUD;
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 
 abstract class TurnBasedSystem : MonoBehaviour
