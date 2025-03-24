@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a56bd3b0c92cc498dafc3079581113, type: 3}
   m_Name: Fire(Oni)
   m_EditorClassIdentifier: 
-  ID: 
-  itemName: 
-  Description: 
+  ID: 2
+  itemName: Fire(Oni)
+  Description: Vengeful fiery spirit in a shape of a mask bringing vengeance onto
+    enemies

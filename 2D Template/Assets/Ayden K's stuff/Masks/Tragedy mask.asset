@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a56bd3b0c92cc498dafc3079581113, type: 3}
   m_Name: Tragedy mask
   m_EditorClassIdentifier: 
-  ID: 
-  itemName: 
-  Description: 
+  ID: 13
+  itemName: Tragedy mask
+  Description: "The world is a set and you\u2019re on center stage! Watch those succumb
+    to their tragic fates."

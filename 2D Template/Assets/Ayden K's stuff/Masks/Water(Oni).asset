@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a56bd3b0c92cc498dafc3079581113, type: 3}
   m_Name: Water(Oni)
   m_EditorClassIdentifier: 
-  ID: 
-  itemName: 
-  Description: 
+  ID: 3
+  itemName: Water(Oni)
+  Description: Playful and defensive spirit inside this wet mask, known for its playful
+    nature and drowning its enemies, it has a lot of control.
