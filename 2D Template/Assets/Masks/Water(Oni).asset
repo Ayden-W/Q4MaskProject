@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 3
   itemName: Water(Oni)
+  SellPrice: 0
+  Cost: 0
   Description: Playful and defensive spirit inside this wet mask, known for its playful
     nature and drowning its enemies, it has a lot of control.
+  Discardable: 1

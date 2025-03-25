@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 8
   itemName: Professionalism mask
+  SellPrice: 0
+  Cost: 0
   Description: This mask is the optimal choice for efficiency offering the high single-target
     dmg and making all enemies fall to unwavering professionalism!
+  Discardable: 1

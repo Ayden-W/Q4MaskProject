@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 13
   itemName: Tragedy mask
+  SellPrice: 0
+  Cost: 0
   Description: "The world is a set and you\u2019re on center stage! Watch those succumb
     to their tragic fates."
+  Discardable: 1

@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 9
   itemName: Glass mask
+  SellPrice: 5
+  Cost: 7
   Description: Enemies will shatter, Allies will shatter, all it takes is a touch
-  Discardable: 0
+  Discardable: 1

@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 4
   itemName: Ice(Oni)
+  SellPrice: 0
+  Cost: 0
   Description: The mask of the Snow Demon that is cold to the touch, and can cause
     massive blizzards freezing all enemies never letting them see the sun again
+  Discardable: 1

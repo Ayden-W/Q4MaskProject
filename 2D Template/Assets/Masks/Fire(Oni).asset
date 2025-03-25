@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 2
   itemName: Fire(Oni)
+  SellPrice: 0
+  Cost: 0
   Description: Vengeful fiery spirit in a shape of a mask bringing vengeance onto
     enemies
+  Discardable: 1

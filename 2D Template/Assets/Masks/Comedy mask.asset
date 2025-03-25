@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 12
   itemName: Comedy mask
+  SellPrice: 0
+  Cost: 0
   Description: There is always something to laugh about as everything around you
     crumbles! Ignore all those horrible feelings and laugh it off while you still
     can
+  Discardable: 1
