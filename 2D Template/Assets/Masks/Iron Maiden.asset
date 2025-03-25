@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 1
   itemName: Iron Maiden
+  SellPrice: 0
+  Cost: 0
   Description: This malevolent looking mask has spikes in and outside of it harming
     the user, but in exchange making them stronger
+  Discardable: 1

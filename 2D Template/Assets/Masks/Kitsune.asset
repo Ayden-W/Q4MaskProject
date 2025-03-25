@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 6
   itemName: Kitsune mask
+  SellPrice: 0
+  Cost: 0
   Description: This Mask resembling a fox makes those fall into disarray getting
     lost in illusions
+  Discardable: 1

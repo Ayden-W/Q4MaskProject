@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 10
   itemName: Mask of the gods
+  SellPrice: 0
+  Cost: 0
   Description: 
+  Discardable: 1

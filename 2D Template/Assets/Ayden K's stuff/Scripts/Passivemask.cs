@@ -5,6 +5,6 @@ public class Passivemask : MaskSystem
 {
     public override void PassiveAbility()
     {
-        Debug.Log("Description");
+        Debug.Log(Description);
     }
 }

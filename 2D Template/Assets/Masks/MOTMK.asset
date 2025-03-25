@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a56bd3b0c92cc498dafc3079581113, type: 3}
-  m_Name: Soul
+  m_Name: MOTMK
   m_EditorClassIdentifier: 
-  ID: 7
-  itemName: soul mask
+  ID: 15
+  itemName: Mask of the Monkey King
   SellPrice: 0
   Cost: 0
-  Description: The Soul takes many forms, in your case in unique moves to harm enemies
+  Description: 
   Discardable: 1

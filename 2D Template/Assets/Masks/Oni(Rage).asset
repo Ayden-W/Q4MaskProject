@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 14
   itemName: Oni(Rage)
-  Description: 
+  SellPrice: 0
+  Cost: 0
+  Description: Too angry to die be like
+  Discardable: 1
