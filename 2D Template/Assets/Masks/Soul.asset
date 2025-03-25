@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 7
   itemName: soul mask
-  Description: 
+  Description: The Soul takes many forms, in your case in unique moves to harm enemies
+  Discardable: 0
