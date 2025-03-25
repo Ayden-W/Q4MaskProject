@@ -165,10 +165,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pfCharacter: {fileID: -5244872961987123390, guid: 00f73715b05cce0438f5cbf42889c631, type: 3}
   pfEnemy: {fileID: 3182382927307686206, guid: 7e676ed35f4853e4cbfb3547452b401c, type: 3}
-  EnemyspawnX: 6
-  EnemyspawnY: 0
-  PlayerspawnX: -7
-  PlayerspawnY: 0
+  EnemyspawnX: 0
+  EnemyspawnY: 3
+  PlayerspawnX: 0
+  PlayerspawnY: -3
 --- !u!1 &949305185
 GameObject:
   m_ObjectHideFlags: 0

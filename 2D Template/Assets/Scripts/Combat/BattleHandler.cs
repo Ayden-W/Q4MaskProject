@@ -18,7 +18,7 @@ public class BattleHandler : MonoBehaviour
     private enum State
     {
         WaitingForPlayer,
-        Busy
+        Busy1
     }
     
     private void Start()
@@ -38,10 +38,11 @@ public class BattleHandler : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                state = State.Busy;
+                state = State.Busy1;
                 playerCharacterBattle.Attack(enemyCharacterBattle, () =>
                 {
                     state = State.WaitingForPlayer;
+                    
                 });
             }
         }
