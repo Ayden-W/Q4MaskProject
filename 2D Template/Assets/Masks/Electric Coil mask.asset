@@ -16,6 +16,8 @@ MonoBehaviour:
   itemName: Electric Coil Mask
   SellPrice: 0
   Cost: 0
-  Description: "A conductive mask that leaves a huge burst of shockingly high dmg\u201D
-    Passive: Shock Resilience & Charge"
+  Description: A conductive mask that leaves a huge burst of shockingly high damage
   Discardable: 1
+  yes: {fileID: 0}
+  SkillList: []
+  PassiveList: []

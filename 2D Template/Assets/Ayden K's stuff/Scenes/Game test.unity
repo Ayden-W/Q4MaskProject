@@ -698,8 +698,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa2cb70d11285f4a90ca05b9e7237e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthPool: 20
-  MaxHealth: 20
+  HealthPool: 100
+  MaxHealth: 100
   TradeBeads: 0
   Inventory:
   - {fileID: 11400000, guid: 598ee68e673b4e74ebd0890488ea7dc3, type: 2}
@@ -717,7 +717,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c1fd1280a1baa56408c312d65d69f14d, type: 2}
   - {fileID: 11400000, guid: 0c55d6d4729a8a748a4c7f9f9f7004d7, type: 2}
   - {fileID: 11400000, guid: a61a7e131dbda37478c7e304ac528c29, type: 2}
-  CurrentMask: {fileID: 11400000, guid: 598ee68e673b4e74ebd0890488ea7dc3, type: 2}
+  CurrentMask: {fileID: 11400000, guid: 39fe9e7e2ada51d489b90e2dd8bfcf93, type: 2}
+  Damage: 0
+  Defence: 0
 --- !u!212 &1714751062
 SpriteRenderer:
   m_ObjectHideFlags: 0
