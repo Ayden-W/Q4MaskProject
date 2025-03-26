@@ -16,6 +16,7 @@ public class CharacterBattle : MonoBehaviour
 
     private void Awake()
     {
+        
         state = State.Idle;
     }
     public void Setup(bool isPlayerTeam)
@@ -38,6 +39,7 @@ public class CharacterBattle : MonoBehaviour
     }
     private void Update()
     {
+        
         Debug.Log(state);
         switch (state)
         {
@@ -49,7 +51,7 @@ public class CharacterBattle : MonoBehaviour
                 float slideSpeed = 10f;
                 transform.position += (slideTargetPosition - GetPosition()) * slideSpeed * Time.deltaTime;
 
-                float reachedDistance = 1f;
+                float reachedDistance = .1f;
                 if (Vector3.Distance(GetPosition(), slideTargetPosition)<reachedDistance)
                 {
                     // arrived at slide target POS
@@ -65,8 +67,11 @@ public class CharacterBattle : MonoBehaviour
     }
     public void Attack(CharacterBattle targetCharacterBattle, Action onAttackComplete)
     {
+        GetPosition();
         Vector3 startingPosition = GetPosition();
-        SlideToPosition(targetCharacterBattle.GetPosition(), () =>
+        slideTargetPosition = targetCharacterBattle.GetPosition() + (GetPosition() - targetCharacterBattle.GetPosition()).normalized /3f;
+        Debug.Log(startingPosition);
+        SlideToPosition(slideTargetPosition, () =>
         {
             //Arrived and Attack target
             state = State.Busy2;
@@ -82,6 +87,7 @@ public class CharacterBattle : MonoBehaviour
                 //slide back completed
 
                 state = State.Idle;
+                this.slideTargetPosition = targetCharacterBattle.GetPosition();
                 onAttackComplete();
                 return;
             });
@@ -91,9 +97,8 @@ public class CharacterBattle : MonoBehaviour
     }
     private void SlideToPosition(Vector3 position, Action OnSlideComplete)
     {
-        this.slideTargetPosition = slideTargetPosition;
+        this.slideTargetPosition = position;
         this.OnSlideComplete = OnSlideComplete;
-        OnSlideComplete();
         state = State.Sliding;
     }
 }
