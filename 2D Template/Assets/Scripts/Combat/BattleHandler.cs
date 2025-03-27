@@ -13,6 +13,7 @@ public class BattleHandler : MonoBehaviour
     private CharacterBattle playerCharacterBattle;
     private CharacterBattle enemyCharacterBattle;
     private CharacterBattle Attack;
+    private CharacterBattle activeCharacterBattle;
     private State state;
 
     private enum State
@@ -29,6 +30,7 @@ public class BattleHandler : MonoBehaviour
             playerCharacterBattle = SpawnCharacter(true);
             enemyCharacterBattle = SpawnCharacter(false);
             state = State.WaitingForPlayer;
+            SetActiveCharacterBattle(playerCharacterBattle);
         
     }
 
@@ -41,8 +43,9 @@ public class BattleHandler : MonoBehaviour
                 state = State.Busy1;
                 playerCharacterBattle.Attack(enemyCharacterBattle, () =>
                 {
-                    state = State.WaitingForPlayer;
-                    
+                    ChooseNextActiveCharacter();
+
+
                 });
             }
         }
@@ -60,8 +63,32 @@ public class BattleHandler : MonoBehaviour
             position = new Vector3(EnemyspawnX, EnemyspawnY);
             return Instantiate(pfEnemy, new Vector3(EnemyspawnX, EnemyspawnY), Quaternion.identity);
         }
-        
-        
+        //Transform characterTransform = Instantiate(pfCharacter, position, Quaternion.identity);
+        //CharacterBattle characterBattle = characterTransform.GetComponent<CharacterBattle>();
+        //characterBattle.Setup(isPlayerTeam);
+        //return characterBattle
+
+    }
+    private void SetActiveCharacterBattle (CharacterBattle characterBattle)
+    {
+        activeCharacterBattle = characterBattle;
+    }
+    private void ChooseNextActiveCharacter()
+    {
+        if (activeCharacterBattle == playerCharacterBattle)
+        {
+            SetActiveCharacterBattle(enemyCharacterBattle);
+            state = State.Busy1;
+            enemyCharacterBattle.Attack(playerCharacterBattle, () =>
+            {
+                ChooseNextActiveCharacter();
+            });
+        }
+        else
+        {
+            SetActiveCharacterBattle(playerCharacterBattle);
+            state = State.WaitingForPlayer;
+        }
     }
 }
 

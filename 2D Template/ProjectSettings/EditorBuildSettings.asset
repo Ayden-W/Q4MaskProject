@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Scenes/Combat testing.unity
+    guid: 9265c907a37611542b90852b41a71987
+  - enabled: 0
     path: Assets/Ayden K's stuff/Scenes/Main menu.unity
     guid: 3e17c906febbd2f45874b5d9d7b294b6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Ayden K's stuff/Scenes/Game test.unity
     guid: 2159e23a6802e0c4c9b175d4c15c184b
   m_configObjects: {}
