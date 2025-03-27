@@ -33,7 +33,7 @@ public class Playerscript : MonoBehaviour
             CurrentHealth += Healing;
             Debug.Log("healing");
         }
-        if (CurrentHealth > MaxHealth)
+        if (CurrentHealth >= MaxHealth)
         {
             CurrentHealth = MaxHealth;
             Debug.Log("max health");
