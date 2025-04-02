@@ -16,36 +16,46 @@ public class Grid_Test : MonoBehaviour
 
     public void Set(int x, int y, bool to)
     {
-        if(CheckPosition(x,y) == false) 
-        {
-            Debug.LogWarning("Ha, Idiot" + x.ToString() + ": " + y.ToString());
-            return; 
-        }
+        
+        
+            if (CheckPosition(x,y) == false) 
+            { 
+                
+                Debug.LogWarning("Ha, Idiot" + x.ToString() + ": " + y.ToString());
+                return;
+            }
+
         grid[x, y] = to;
     }
 
     public bool Get(int x, int y)
     {
-        if (CheckPosition(x, y) == false)
-        {
-            Debug.LogWarning("Ha, Idiot" + x.ToString() + ": " + y.ToString());
+        
+        
+            if (CheckPosition(x, y) == false) 
+            {
+                Debug.LogWarning("Ha, Idiot" + x.ToString() + ": " + y.ToString());
+                 return false;
+            }
             
-            return false; 
-        }
+            
+             
+        
         return grid[x, y];
     }
 
     public bool CheckPosition(int x, int y)
     {
-        if (x < 0)
+        if (x < 0 || x >= length )
         {
             return false;
         }
 
-        if (y < 0)
+        if (y < 0 || y >= height)
         {
             return false;
         }
+
         return true;
     }
 }
