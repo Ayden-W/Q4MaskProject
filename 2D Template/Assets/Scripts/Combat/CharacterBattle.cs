@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class CharacterBattle : MonoBehaviour
 {
+    public HealthBar healthBar;
     private State state;
     private Vector3 slideTargetPosition;
     private Action OnSlideComplete;
@@ -65,6 +66,7 @@ public class CharacterBattle : MonoBehaviour
     {
         return transform.position;
     }
+    //Melee attack
     public void Attack(CharacterBattle targetCharacterBattle, Action onAttackComplete)
     {
         GetPosition();
