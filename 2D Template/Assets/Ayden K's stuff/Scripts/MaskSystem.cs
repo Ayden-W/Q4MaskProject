@@ -9,6 +9,8 @@ public abstract class MaskSystem : ScriptableObject
     [TextArea] public string Description;
     public bool Discardable;
 
-    public abstract void PassiveAbility();
-    
+    public abstract void OnEquip(Playerscript player);
+    public abstract void OnUpdate(Playerscript player);
+    public abstract void OnUnequip(Playerscript player);
+
 }
