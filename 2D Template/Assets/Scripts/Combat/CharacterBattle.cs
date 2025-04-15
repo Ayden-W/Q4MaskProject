@@ -9,6 +9,8 @@ public class CharacterBattle : MonoBehaviour
     private State state;
     private Vector3 slideTargetPosition;
     private Action OnSlideComplete;
+
+    private int baseDamage = 10;
     private enum State
     {
         Idle,
@@ -19,7 +21,7 @@ public class CharacterBattle : MonoBehaviour
 
     private void Awake()
     {
-        
+
         state = State.Idle;
     }
     public void Setup(bool isPlayerTeam, Healthsystem System)
@@ -33,7 +35,7 @@ public class CharacterBattle : MonoBehaviour
             //characterBase.
             //characterBase.GetMaterial().mainTexture=
         }
-        else 
+        else
         {
             // enemy sprite and anim 
             //7min in video https://www.youtube.com/watch?v=0QU0yV0CYT4&t=413s
@@ -44,7 +46,7 @@ public class CharacterBattle : MonoBehaviour
     }
     private void Update()
     {
-        
+
         Debug.Log(state);
         switch (state)
         {
@@ -57,7 +59,7 @@ public class CharacterBattle : MonoBehaviour
                 transform.position += (slideTargetPosition - GetPosition()) * slideSpeed * Time.deltaTime;
 
                 float reachedDistance = .1f;
-                if (Vector3.Distance(GetPosition(), slideTargetPosition)<reachedDistance)
+                if (Vector3.Distance(GetPosition(), slideTargetPosition) < reachedDistance)
                 {
                     // arrived at slide target POS
                     transform.position = slideTargetPosition;
@@ -75,7 +77,7 @@ public class CharacterBattle : MonoBehaviour
     {
         GetPosition();
         Vector3 startingPosition = GetPosition();
-        slideTargetPosition = targetCharacterBattle.GetPosition() + (GetPosition() - targetCharacterBattle.GetPosition()).normalized /3f;
+        slideTargetPosition = targetCharacterBattle.GetPosition() + (GetPosition() - targetCharacterBattle.GetPosition()).normalized / 3f;
         Debug.Log(startingPosition);
         SlideToPosition(slideTargetPosition, () =>
         {
@@ -85,7 +87,7 @@ public class CharacterBattle : MonoBehaviour
             //CharacterBase.PlayAnimAttack(attackDir, null, () => {
             //characterBase.PlayAnimIdle(attackDir);
             Debug.Log("Attack");
-            healthSystem.Damage(10);
+            healthSystem.Damage(baseDamage);
             Debug.Log("Health:" + healthSystem.GetHealthPercent());
 
 
@@ -102,7 +104,14 @@ public class CharacterBattle : MonoBehaviour
             });
             //});
         });
-        
+
+    }
+
+    public void RangedAttack(CharacterBattle targetCharacterBattle, Action onAttackComplete)
+    {
+        state = State.Busy2;
+        Debug.Log("Ranged Attack");
+       
     }
     private void SlideToPosition(Vector3 position, Action OnSlideComplete)
     {
