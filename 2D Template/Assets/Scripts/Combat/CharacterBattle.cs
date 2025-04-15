@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class CharacterBattle : MonoBehaviour
 {
+    private Healthsystem healthSystem;
     public HealthBar healthBar;
+
     private State state;
     private Vector3 slideTargetPosition;
     private Action OnSlideComplete;
@@ -20,10 +22,12 @@ public class CharacterBattle : MonoBehaviour
         
         state = State.Idle;
     }
-    public void Setup(bool isPlayerTeam)
+    public void Setup(bool isPlayerTeam, Healthsystem System)
     {
+        healthSystem = System;
         if (isPlayerTeam)
         {
+
             // set Anim and Texture
 
             //characterBase.
@@ -81,6 +85,9 @@ public class CharacterBattle : MonoBehaviour
             //CharacterBase.PlayAnimAttack(attackDir, null, () => {
             //characterBase.PlayAnimIdle(attackDir);
             Debug.Log("Attack");
+            healthSystem.Damage(10);
+            Debug.Log("Health:" + healthSystem.GetHealthPercent());
+
 
 
             //attack completed, Slide back
