@@ -9,16 +9,21 @@ public class Playerscript : MonoBehaviour
     public float MaxHealth;
     public float TradeBeads;
     public List<MaskSystem> Inventory;
+
     public float Damage;
     public float Defence;
-    public float Healing = 15;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+       
+        
+        
+        
         foreach (var item in Inventory)
         {
             Debug.Log(item.name);
             item.OnEquip(this);
+           
         }
         
     }
@@ -29,17 +34,4 @@ public class Playerscript : MonoBehaviour
         // Don't forget to call a Mask's Equip and Unequip functions when they enter and leave your inventory.
     }
 
-    public void healing()
-    {
-        if (CurrentHealth <= MaxHealth)
-        {
-            CurrentHealth += Healing;
-            Debug.Log("healing");
-        }
-        if (CurrentHealth >= MaxHealth)
-        {
-            CurrentHealth = MaxHealth;
-            Debug.Log("max health");
-        }
-    }
 }
