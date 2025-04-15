@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: healing
+  m_text: mask test
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -529,8 +529,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 942560718}
-        m_TargetAssemblyTypeName: Playerscript, Assembly-CSharp
-        m_MethodName: healing
+        m_TargetAssemblyTypeName: Collecting, Assembly-CSharp
+        m_MethodName: AddToList
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -587,16 +587,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 942560712}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aa2cb70d11285f4a90ca05b9e7237e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 9491e720f3e0d7644ac32615b6c17b58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentHealth: 0
-  MaxHealth: 0
-  TradeBeads: 0
-  Inventory: []
-  Damage: 0
-  Defence: 0
-  Healing: 15
+  listOfMasks:
+  - {fileID: 11400000, guid: 598ee68e673b4e74ebd0890488ea7dc3, type: 2}
+  - {fileID: 11400000, guid: efd3f59eea9703b40a958c24be3a0de3, type: 2}
+  - {fileID: 11400000, guid: 921fc46d9648e7f489b9ef1ccf455c90, type: 2}
+  - {fileID: 11400000, guid: 0c55d6d4729a8a748a4c7f9f9f7004d7, type: 2}
+  - {fileID: 11400000, guid: 28d569d157bb0c6439bfa27bc1364518, type: 2}
+  - {fileID: 11400000, guid: 46f95b1a30d630645b9d9c87fe3d9b94, type: 2}
+  - {fileID: 11400000, guid: a4a0c879e6af3054997d8094e8719ea9, type: 2}
+  - {fileID: 11400000, guid: acc32b57d676df642877e02c5a76e87d, type: 2}
+  - {fileID: 11400000, guid: 0a4ffb015b788c74a8bc2bf047c47989, type: 2}
+  - {fileID: 11400000, guid: 39fe9e7e2ada51d489b90e2dd8bfcf93, type: 2}
+  - {fileID: 11400000, guid: 77cebf2b63fb16c469065f85dae072eb, type: 2}
+  - {fileID: 11400000, guid: a9805c6ed87a24b45a575be18480f0b6, type: 2}
+  - {fileID: 11400000, guid: a61a7e131dbda37478c7e304ac528c29, type: 2}
+  - {fileID: 11400000, guid: d78196dac91488042bf9361ca0bbafd0, type: 2}
+  - {fileID: 11400000, guid: c1fd1280a1baa56408c312d65d69f14d, type: 2}
+  Playerscript: {fileID: 1714751061}
 --- !u!1 &1003631246
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,11 +1001,9 @@ MonoBehaviour:
   CurrentHealth: 80
   MaxHealth: 100
   TradeBeads: 0
-  Inventory:
-  - {fileID: 11400000, guid: 39fe9e7e2ada51d489b90e2dd8bfcf93, type: 2}
-  Damage: 10
-  Defence: 10
-  Healing: 15
+  Inventory: []
+  Damage: 1
+  Defence: 1
 --- !u!212 &1714751062
 SpriteRenderer:
   m_ObjectHideFlags: 0
