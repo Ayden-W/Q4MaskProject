@@ -81,6 +81,7 @@ public class BattleHandler : MonoBehaviour
 
                 });
             }
+           
         }
     }
     private CharacterBattle SpawnCharacter(bool isPlayerTeam)
