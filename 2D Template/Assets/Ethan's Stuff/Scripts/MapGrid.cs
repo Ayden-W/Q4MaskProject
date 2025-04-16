@@ -31,7 +31,9 @@ public class MapGrid : MonoBehaviour
 
             lr.positionCount++;   //Sets line for LineRenderer
             lr.SetPosition(lr.positionCount-1, randomPosition);
-            
+            lr.positionCount++;   //Sets line for LineRenderer
+            lr.SetPosition(lr.positionCount - 1, randomPosition2);
+
         }
     }
 
