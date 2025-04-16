@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class CharacterBattle : MonoBehaviour
 {
+   
     private Healthsystem healthSystem;
     public HealthBar healthBar;
 
@@ -51,6 +52,7 @@ public class CharacterBattle : MonoBehaviour
         switch (state)
         {
             case State.Idle:
+               
                 break;
             case State.Busy2:
                 break;
@@ -66,6 +68,7 @@ public class CharacterBattle : MonoBehaviour
                     OnSlideComplete();
                 }
                 break;
+                     
         }
     }
     public Vector3 GetPosition()
@@ -78,7 +81,7 @@ public class CharacterBattle : MonoBehaviour
         GetPosition();
         Vector3 startingPosition = GetPosition();
         slideTargetPosition = targetCharacterBattle.GetPosition() + (GetPosition() - targetCharacterBattle.GetPosition()).normalized / 3f;
-        Debug.Log(startingPosition);
+       
         SlideToPosition(slideTargetPosition, () =>
         {
             //Arrived and Attack target
@@ -88,7 +91,7 @@ public class CharacterBattle : MonoBehaviour
             //characterBase.PlayAnimIdle(attackDir);
             Debug.Log("Attack");
             healthSystem.Damage(baseDamage);
-            Debug.Log("Health:" + healthSystem.GetHealthPercent());
+          
 
 
 
