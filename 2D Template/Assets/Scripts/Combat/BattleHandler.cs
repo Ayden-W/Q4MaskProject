@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BattleHandler : MonoBehaviour
@@ -9,6 +10,8 @@ public class BattleHandler : MonoBehaviour
     public int EnemyspawnY = 0;
     public int PlayerspawnX = -4;
     public int PlayerspawnY = 0;
+    public int stack = 0;
+    public bool Increased;
 
     private CharacterBattle playerCharacterBattle;
     private CharacterBattle enemyCharacterBattle;
@@ -74,6 +77,7 @@ public class BattleHandler : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 state = State.Busy1;
+                Increased = true;
                 playerCharacterBattle.Attack(enemyCharacterBattle, () =>
                 {
                     ChooseNextActiveCharacter();
@@ -81,9 +85,19 @@ public class BattleHandler : MonoBehaviour
 
                 });
             }
-           
+
+            if (state == State.Busy1 && Increased == true)
+            {
+                stack += 1;
+               Increased= false;
+
+                Debug.Log("Stack Increase" + stack);
+                
+            }
         }
+        
     }
+   
     private CharacterBattle SpawnCharacter(bool isPlayerTeam)
     {
         Vector3 position;
