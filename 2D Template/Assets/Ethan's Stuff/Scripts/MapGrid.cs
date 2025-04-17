@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MapGrid : MonoBehaviour
@@ -23,8 +24,10 @@ public class MapGrid : MonoBehaviour
             randomInt2 = Random.Range(-4, 4);// Minimum and Maximum of Y 
             randomPosition = new Vector2(-2 + randomPosition.x + 1, randomInt);
             randomPosition2 = new Vector2(-2 + randomPosition2.x + 1, randomInt2);
-            Instantiate(node, randomPosition, node.transform.rotation);
-            Instantiate(node, randomPosition2, node.transform.rotation);
+            NodeList nodeList= Instantiate(node, randomPosition, node.transform.rotation).GetComponent<NodeList>();
+            NodeList Nodelist2= Instantiate(node, randomPosition2, node.transform.rotation).GetComponent<NodeList>();
+            //how to select scenes
+            nodeList.sceneName = "Yor Momm";
 
             /*LineRenderer lr = FindFirstObjectByType<LineRenderer>();*/ // Grabs the LineRenderer
             LineRenderer lr = FindFirstObjectByType<LineRenderer>();

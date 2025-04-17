@@ -18,12 +18,10 @@ public class lineController : MonoBehaviour
     {
         lr.positionCount = points.Length;
         this.points = points;
-    }
-    private void Update()
-    {
+
         for (int i = 0; i < points.Length; i++)
         {
-            lr.SetPosition(i , points[i].position);
+            lr.SetPosition(i, points[i].position);
         }
     }
 }

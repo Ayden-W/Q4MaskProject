@@ -1,24 +1,22 @@
+using NUnit.Framework;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public abstract class NodeList : ScriptableObject
+public class NodeList : MonoBehaviour
 {
-    public GameObject node;
-    //private void OnMouseDown()
-    //{
-    //    Enter();
-    //}
-    //public void Enter()
-    //{
-    //    SceneManager.LoadScene("sceneName");
-    //}
-    
-
-    [SerializeField] public Sprite sprite;
-    private bool inRange;
+    [SerializeField] public GameObject node;
+    [SerializeField] public Sprite Icon;
     [SerializeField] public string Type;
+    [SerializeField] public bool inRange; /*=> */
+    [SerializeField] public string sceneName;
+    private typings NL;
 
+    void Update()
+    {
+        Range();
+    }
     private void Start()
     {
         
@@ -30,9 +28,18 @@ public abstract class NodeList : ScriptableObject
     }
     public void OnMouseDown()
     {
-        if (inRange)
-        SceneManager.LoadScene("sceneName");
+        Debug.Log("Bonk");
+        if (node && inRange == true)
+        {
+            
+            SceneManager.LoadScene(sceneName);
+        }
+
+        
+        
+        
     }
+    
     
 
 }

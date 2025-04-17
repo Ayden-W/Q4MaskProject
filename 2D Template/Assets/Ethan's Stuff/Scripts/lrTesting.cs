@@ -6,9 +6,9 @@ public class lrTesting : MonoBehaviour
     [SerializeField] private lineController line;
 
 
-    private void Awake()
+    private void Start()
     {
-        line.SetUpLine(points);
+        //line.SetUpLine(points);
     }
 
 }
