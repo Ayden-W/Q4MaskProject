@@ -10,14 +10,20 @@ public class BattleHandler : MonoBehaviour
     public int EnemyspawnY = 0;
     public int PlayerspawnX = -4;
     public int PlayerspawnY = 0;
-    public int stack = 0;
+    public int Stack = 0;
     public bool Increased;
 
     private CharacterBattle playerCharacterBattle;
     private CharacterBattle enemyCharacterBattle;
     private CharacterBattle Attack;
     private CharacterBattle activeCharacterBattle;
+    
     private State state;
+
+
+    private IronMaden IronMaden;
+
+
 
     public Transform PFHealthBar;
 
@@ -74,6 +80,7 @@ public class BattleHandler : MonoBehaviour
     {
         if (state == State.WaitingForPlayer)
         {
+           
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 state = State.Busy1;
@@ -85,13 +92,14 @@ public class BattleHandler : MonoBehaviour
 
                 });
             }
+            if (Input.GetKeyDown(KeyCode.H)) { IronMaden.UseStacks(); }
 
             if (state == State.Busy1 && Increased == true)
             {
-                stack += 1;
+                Stack++;
                Increased= false;
 
-                Debug.Log("Stack Increase" + stack);
+                Debug.Log("Stack Increase" + Stack);
                 
             }
         }
