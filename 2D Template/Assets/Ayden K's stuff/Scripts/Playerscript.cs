@@ -15,12 +15,7 @@ public class Playerscript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        foreach (var item in Inventory)
-        {
-            Debug.Log(item.name);
-            item.OnEquip(this);
 
-        }
 
     }
 
