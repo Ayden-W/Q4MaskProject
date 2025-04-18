@@ -27,7 +27,8 @@ public class MapGrid : MonoBehaviour
             NodeList nodeList= Instantiate(node, randomPosition, node.transform.rotation).GetComponent<NodeList>();
             NodeList Nodelist2= Instantiate(node, randomPosition2, node.transform.rotation).GetComponent<NodeList>();
             //how to select scenes
-            nodeList.sceneName = "Yor Momm";
+            nodeList.sceneName = "Game test";
+            Nodelist2.sceneName = "";
 
             /*LineRenderer lr = FindFirstObjectByType<LineRenderer>();*/ // Grabs the LineRenderer
             LineRenderer lr = FindFirstObjectByType<LineRenderer>();

@@ -2,7 +2,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class typings : List
+public class typings : MonoBehaviour
 {
 
 

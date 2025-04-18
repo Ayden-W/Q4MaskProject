@@ -235,7 +235,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      playbuttonspritesheet_0: -1750211592945624349
+      playbuttonspritesheet_1: -3774890796573810618
+      playbuttonspritesheet_2: -738352834495638152
+      playbuttonspritesheet_3: 7810559110149133024
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
