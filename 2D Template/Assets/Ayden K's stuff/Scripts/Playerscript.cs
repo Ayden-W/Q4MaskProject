@@ -19,15 +19,18 @@ public class Playerscript : MonoBehaviour
         {
             Debug.Log(item.name);
             item.OnEquip(this);
-           
+
         }
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateMasks()
     {
-        // Don't forget to call a Mask's Equip and Unequip functions when they enter and leave your inventory.
+        foreach (var item in Inventory)
+        {
+            Debug.Log(item.name);
+            item.OnEquip(this);
+        }
     }
-
 }
+

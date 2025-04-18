@@ -788,8 +788,7 @@ MonoBehaviour:
   CurrentHealth: 80
   MaxHealth: 100
   TradeBeads: 0
-  Inventory:
-  - {fileID: 11400000, guid: 39fe9e7e2ada51d489b90e2dd8bfcf93, type: 2}
+  Inventory: []
   Damage: 1
   Defence: 1
 --- !u!212 &1714751062

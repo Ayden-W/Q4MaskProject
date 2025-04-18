@@ -10,7 +10,7 @@ public class Passivemask : MaskSystem
     public PassiveAbilitys yes;     
     public List<ScriptableObject> SkillList;
     public List<ScriptableObject> PassiveList;
-
+    public bool isEquipped = false;
 
     public override void OnEquip(Playerscript player)
     {        
@@ -18,10 +18,19 @@ public class Passivemask : MaskSystem
         yes.Passives();
 
         // raise the player's stats
-        player.Defence *= yes.Defence;
-        player.Damage *= yes.DMG;
-        Debug.Log(player.Damage);
-        Debug.Log(player.Defence);
+        if (isEquipped == false)
+        {
+            player.Defence *= yes.Defence;
+            player.Damage *= yes.DMG;
+            Debug.Log(player.Damage);
+            Debug.Log(player.Defence);
+            isEquipped = true;
+        }
+        else if (isEquipped == true)
+        {
+            Debug.Log(player.Damage);
+            Debug.Log(player.Defence);
+        }
     }
 
     public override void OnUpdate(Playerscript player)
@@ -34,5 +43,6 @@ public class Passivemask : MaskSystem
         // lower the player's stats
         player.Defence /= yes.Defence;
         player.Damage /= yes.DMG;
+        isEquipped = false;
     }
 }
