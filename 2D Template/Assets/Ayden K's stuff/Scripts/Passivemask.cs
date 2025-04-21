@@ -15,10 +15,10 @@ public class Passivemask : MaskSystem
     public override void OnEquip(Playerscript player)
     {        
         Debug.Log(Description);
-        yes.Passives();
+        yes?.Passives();
 
         // raise the player's stats
-        if (isEquipped == false)
+        if (yes && isEquipped == false)
         {
             player.Defence *= yes.Defence;
             player.Damage *= yes.DMG;
