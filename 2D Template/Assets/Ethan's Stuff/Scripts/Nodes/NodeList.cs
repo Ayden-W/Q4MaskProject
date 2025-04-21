@@ -5,17 +5,18 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NodeList : MonoBehaviour
+public abstract class NodeList : MonoBehaviour
 {
     [SerializeField] public GameObject node;
     [SerializeField] public Sprite Icon;
-    [SerializeField] public string Type;
+    [SerializeField] public List typings;
     [SerializeField] public bool inRange; /*=> */
     [SerializeField] public string sceneName;
-    private typings NL;
+    
 
     void Update()
     {
+        
         Range();
     }
     private void Start()
@@ -30,10 +31,13 @@ public class NodeList : MonoBehaviour
     public void OnMouseDown()
     {
         Debug.Log("Bonk");
+
+        OnClick();
+
         if (node && inRange == true)
         {
             Debug.Log("Ow");
-            SceneManager.LoadScene(sceneName);
+            //SceneManager.LoadScene(sceneName);
         }
         else if(inRange == false)
         {
@@ -42,17 +46,18 @@ public class NodeList : MonoBehaviour
         else
         {
             //Sadge
-            Debug.Log("Hey Paul they might be blind");
-            Debug.Log("Really? If I had a nick-");
-            Debug.Log("Stop making that joke it gets old...");
-            Debug.Log("Fineeee... We gonna send them to the tp maze? :D");
-            Debug.Log("No");
-            Debug.Log("Lame");
+            //Debug.Log("Hey Paul they might be blind");
+            //Debug.Log("Really? If I had a nick-");
+            //Debug.Log("Stop making that joke it gets old...");
+            //Debug.Log("Fineeee... We gonna send them to the tp maze? :D");
+            //Debug.Log("No");
+            //Debug.Log("Lame");
         }
         
         
         
     }
-    
+
+    public abstract void OnClick();
 
 }
