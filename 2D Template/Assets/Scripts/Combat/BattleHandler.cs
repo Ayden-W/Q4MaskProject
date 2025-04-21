@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BattleHandler : MonoBehaviour
 {
@@ -12,12 +13,12 @@ public class BattleHandler : MonoBehaviour
     public int PlayerspawnY = 0;
     public int Stack = 0;
     public bool Increased;
-
+    public int PlayerHealth;
     private CharacterBattle playerCharacterBattle;
     private CharacterBattle enemyCharacterBattle;
     private CharacterBattle Attack;
     private CharacterBattle activeCharacterBattle;
-    
+    public string DeathScene = "Main menu";
     private State state;
 
 
@@ -61,11 +62,15 @@ public class BattleHandler : MonoBehaviour
         Transform HealthBartransform2 = Instantiate(PFHealthBar, new Vector3(0, -5), Quaternion.identity);
         HealthBar healthBar2 = HealthBartransform2.GetComponent<HealthBar>();
         healthBar2.Setup(healthSystem2);
+        healthSystem2.health = PlayerHealth;
 
-       
         Debug.Log("Health:" + healthSystem2.GetHealthPercent());
         healthSystem2.Damage(10);
         Debug.Log("Health:" + healthSystem2.GetHealthPercent());
+
+       
+        
+
 
         enemyCharacterBattle.Setup(true, healthSystem2);
 
@@ -103,7 +108,12 @@ public class BattleHandler : MonoBehaviour
                 
             }
         }
-        
+        if (PlayerHealth <= 0)
+        {
+            SceneManager.LoadScene(DeathScene);
+        }
+
+
     }
    
     private CharacterBattle SpawnCharacter(bool isPlayerTeam)
