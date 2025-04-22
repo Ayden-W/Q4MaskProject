@@ -24,7 +24,7 @@ public class BattleHandler : MonoBehaviour
 
     private IronMaden IronMaden;
 
-
+    public Healthsystem Healthsystem;
 
     public Transform PFHealthBar;
 
@@ -59,10 +59,11 @@ public class BattleHandler : MonoBehaviour
            
         //Player
         Healthsystem healthSystem2 = new Healthsystem(100);
+        PlayerHealth = healthSystem2.health ;
         Transform HealthBartransform2 = Instantiate(PFHealthBar, new Vector3(0, -5), Quaternion.identity);
         HealthBar healthBar2 = HealthBartransform2.GetComponent<HealthBar>();
         healthBar2.Setup(healthSystem2);
-        healthSystem2.health = PlayerHealth;
+       
 
         Debug.Log("Health:" + healthSystem2.GetHealthPercent());
         healthSystem2.Damage(10);
@@ -83,6 +84,10 @@ public class BattleHandler : MonoBehaviour
 
     private void Update()
     {
+        
+           
+        
+        Debug.Log(PlayerHealth);
         if (state == State.WaitingForPlayer)
         {
            
@@ -107,12 +112,15 @@ public class BattleHandler : MonoBehaviour
                 Debug.Log("Stack Increase" + Stack);
                 
             }
+           
         }
         
 
 
     }
-   
+  
+       
+    
     private CharacterBattle SpawnCharacter(bool isPlayerTeam)
     {
         Vector3 position;

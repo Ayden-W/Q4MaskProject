@@ -20,6 +20,8 @@ public class CharacterBattle : MonoBehaviour
     }
 
 
+   
+
     private void Awake()
     {
 

@@ -1,5 +1,6 @@
 
 using System;
+using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 public class Healthsystem 
 {
@@ -8,6 +9,10 @@ public class Healthsystem
     public int health;
     private int MaxHealth;
    
+
+
+    
+    
     public Healthsystem(int Maxhealth) 
     {
         this.MaxHealth = Maxhealth;
@@ -23,14 +28,27 @@ public class Healthsystem
     }
     public void Damage(int damageAmount)
     {
+
         health -= damageAmount;
-        if (health < 0) health = 0;
-        
-        if (OnHealthChanged != null) OnHealthChanged(this, EventArgs.Empty);
-        if (battleHandler.PlayerHealth <= 0)
-        {
-            SceneManager.LoadScene("Main menu");
+        if (health < 0) 
+        { 
+            health = 0;
+
+            if (battleHandler.PlayerHealth <= 0)
+            {
+
+                SceneManager.LoadScene("Main menu");
+            }
         }
+
+
+
+        if (OnHealthChanged != null)
+        {
+            OnHealthChanged(this, EventArgs.Empty);
+           
+        }
+        
     }
     public void Heal(int healAmount)
     {
@@ -38,4 +56,7 @@ public class Healthsystem
         if (health > MaxHealth) health = MaxHealth;
         if (OnHealthChanged != null) OnHealthChanged(this, EventArgs.Empty);
     }
+   
+
+    
 }
