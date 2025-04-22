@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a56bd3b0c92cc498dafc3079581113, type: 3}
-  m_Name: Oni(Rage)
+  m_Name: Mask of wisdom
   m_EditorClassIdentifier: 
-  ID: 13
-  itemName: Oni(Rage)
+  ID: 14
+  itemName: Maks of Wisdom
   SellPrice: 0
   Cost: 0
-  Description: Too angry to die be like
-  Discardable: 1
+  Description: 
+  Discardable: 0
   yes: {fileID: 0}
   SkillList: []
   PassiveList: []

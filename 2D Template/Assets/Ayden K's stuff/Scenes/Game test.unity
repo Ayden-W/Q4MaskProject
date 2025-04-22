@@ -499,11 +499,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: acc32b57d676df642877e02c5a76e87d, type: 2}
   - {fileID: 11400000, guid: 0a4ffb015b788c74a8bc2bf047c47989, type: 2}
   - {fileID: 11400000, guid: 39fe9e7e2ada51d489b90e2dd8bfcf93, type: 2}
-  - {fileID: 11400000, guid: 77cebf2b63fb16c469065f85dae072eb, type: 2}
   - {fileID: 11400000, guid: a9805c6ed87a24b45a575be18480f0b6, type: 2}
-  - {fileID: 11400000, guid: a61a7e131dbda37478c7e304ac528c29, type: 2}
   - {fileID: 11400000, guid: d78196dac91488042bf9361ca0bbafd0, type: 2}
   - {fileID: 11400000, guid: c1fd1280a1baa56408c312d65d69f14d, type: 2}
+  - {fileID: 11400000, guid: f95950e5222725f4bb50fc271217e7d9, type: 2}
+  - {fileID: 11400000, guid: 1bd32786333e4d14e894d994f986cab8, type: 2}
+  - {fileID: 11400000, guid: e2f59b52a5614e9459d2d16451dac0ca, type: 2}
   Playerscript: {fileID: 1714751061}
 --- !u!1 &1190512660
 GameObject:

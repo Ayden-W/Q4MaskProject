@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a56bd3b0c92cc498dafc3079581113, type: 3}
   m_Name: Comedy mask
   m_EditorClassIdentifier: 
-  ID: 12
+  ID: 11
   itemName: Comedy mask
   SellPrice: 0
   Cost: 0
@@ -20,3 +20,6 @@ MonoBehaviour:
     crumbles! Ignore all those horrible feelings and laugh it off while you still
     can
   Discardable: 1
+  yes: {fileID: 0}
+  SkillList: []
+  PassiveList: []
