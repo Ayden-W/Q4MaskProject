@@ -17,7 +17,7 @@ public class Heal : NodeList
 
     public override void OnClick()
     {
-        healthsystem.Heal(10);
+        healthsystem?.Heal(10);
       
         Debug.Log("Wow You healed at full hp, nice");
 

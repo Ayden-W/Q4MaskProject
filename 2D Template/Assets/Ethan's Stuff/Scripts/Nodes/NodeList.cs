@@ -12,12 +12,21 @@ public abstract class NodeList : MonoBehaviour
     [SerializeField] public List typings;
     [SerializeField] public bool inRange; /*=> */
     [SerializeField] public string sceneName;
-    
 
+    public static NodeList current;
+
+    protected SpriteRenderer spriteRenderer;
+
+    public NodeList Next;
+
+    protected virtual void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
     void Update()
     {
         
-        Range();
+       
     }
     private void Start()
     {
@@ -30,14 +39,29 @@ public abstract class NodeList : MonoBehaviour
     }
     public void OnMouseDown()
     {
+        if(current.Next != this)
+        {
+            return;
+        }
+
+
+
+
         Debug.Log("Bonk");
 
         OnClick();
+
+        current.spriteRenderer.color = Color.white;
+
+        current = this;
+
+        spriteRenderer.color = Color.yellow;
 
         if (node && inRange == true)
         {
             Debug.Log("Ow");
             //SceneManager.LoadScene(sceneName);
+            
         }
         else if(inRange == false)
         {
@@ -53,9 +77,9 @@ public abstract class NodeList : MonoBehaviour
             //Debug.Log("No");
             //Debug.Log("Lame");
         }
+
         
-        
-        
+
     }
 
     public abstract void OnClick();

@@ -7,17 +7,21 @@ public class MapGrid : MonoBehaviour
     public GameObject node;
     private float randomInt;
     private float randomInt2;
-    private int nodePosition;
+    private GameObject CurrentNode;
     private Vector3 randomPosition;
     private Vector3 randomPosition2;
     private float originalX;
     public float min;
     public float max;
     public float xSpacing;
+    private bool inRange;
+    Sensor sensor;
+    DetectNode detectNode;
+    public GameObject nodeGroup;
     
     private void Awake()
     {
-       
+        sensor = GetComponent<Sensor>();
 
         for (int i = 0; i < 10; i++)
         {
@@ -29,6 +33,9 @@ public class MapGrid : MonoBehaviour
 
             GameObject nodeListGo = Instantiate(node, randomPosition + Vector3.left * 1, node.transform.rotation);
             GameObject Nodelist2Go = Instantiate(node, randomPosition2 + Vector3.left * 1, node.transform.rotation);
+
+            nodeListGo.transform.SetParent(nodeGroup.transform, true);
+            Nodelist2Go.transform.SetParent(nodeGroup.transform, true);
 
             NodeList nodeList;
             NodeList nodeList2;
@@ -85,8 +92,9 @@ public class MapGrid : MonoBehaviour
                 nodeList2 = Nodelist2Go.AddComponent<Shop>();
             }
 
-                /*LineRenderer lr = FindFirstObjectByType<LineRenderer>();*/ // Grabs the LineRenderer
-                LineRenderer lr = FindFirstObjectByType<LineRenderer>();
+            /*LineRenderer lr = FindFirstObjectByType<LineRenderer>();*/ // Grabs the LineRenderer
+            LineRenderer lr = FindFirstObjectByType<LineRenderer>();
+
 
             lr.positionCount++;   //Sets line for LineRenderer
             lr.SetPosition(lr.positionCount-1, nodeList.transform.position);
@@ -94,6 +102,15 @@ public class MapGrid : MonoBehaviour
             lr.SetPosition(lr.positionCount - 1, nodeList2.transform.position);
 
         }
+
+        node.AddComponent<EmptyNode>();
+
+        for (int i = 0; i< nodeGroup.transform.childCount - 1; i++)
+        {
+            nodeGroup.transform.GetChild(i).GetComponent<NodeList>().Next = nodeGroup.transform.GetChild(i + 1).GetComponent<NodeList>();
+        }
+
+
     }
 
 
