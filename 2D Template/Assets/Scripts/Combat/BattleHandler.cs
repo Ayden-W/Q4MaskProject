@@ -108,10 +108,7 @@ public class BattleHandler : MonoBehaviour
                 
             }
         }
-        if (PlayerHealth <= 0)
-        {
-            SceneManager.LoadScene(DeathScene);
-        }
+        
 
 
     }

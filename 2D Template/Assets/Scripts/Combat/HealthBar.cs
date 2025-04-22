@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class HealthBar : MonoBehaviour
 {
+   
     private Healthsystem healthSystem;
     public void Setup(Healthsystem healthSystem)
     {
