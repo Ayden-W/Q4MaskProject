@@ -16,10 +16,14 @@ MonoBehaviour:
   itemName: Glass mask
   SellPrice: 5
   Cost: 7
-  Description: Enemies will shatter, Allies will shatter, all it takes is a touch
+  Description: 'Enemies will shatter, Allies will shatter, all it takes is a touch
+
+    Multiplies
+    attack by 1.35
+
+    Divides defense by 0.75'
   Discardable: 1
   yes: {fileID: 11400000, guid: e158257fe9eec494c9ec38eeabfd3659, type: 2}
   SkillList: []
   PassiveList:
   - {fileID: 11400000, guid: e158257fe9eec494c9ec38eeabfd3659, type: 2}
-  isEquipped: 0

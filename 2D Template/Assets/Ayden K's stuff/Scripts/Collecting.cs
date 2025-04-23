@@ -2,11 +2,15 @@ using NUnit.Framework;
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 public class Collecting : MonoBehaviour
 {
     public List<MaskSystem> listOfMasks;
     public Playerscript Playerscript;
     private int randomInt;
+
+    public TMP_Text description;
+
    public void AddToList()
     {
         randomInt = Random.Range(0, listOfMasks.Count);
@@ -26,5 +30,10 @@ public class Collecting : MonoBehaviour
     {
         Playerscript.Inventory.Remove(mask);
         mask.OnUnequip(Playerscript);
+    }
+
+    public void PrintDescription(MaskSystem Mask)
+    {
+        description.SetText(Mask.Description);
     }
 }
