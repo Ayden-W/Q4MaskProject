@@ -337,6 +337,70 @@ MonoBehaviour:
   points:
   - {fileID: 1273458659}
   line: {fileID: 2100681743}
+--- !u!1001 &1212912681
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1676828123533234273, guid: 5ae6bfef14e480d40bbf63b661e7419d, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -8102345360448962514, guid: a8b7e8d1edc3dd64ba06708311eab1cb, type: 2}
+    - target: {fileID: 1676828123533234278, guid: 5ae6bfef14e480d40bbf63b661e7419d, type: 3}
+      propertyPath: m_Name
+      value: AudioManager 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676828123533234279, guid: 5ae6bfef14e480d40bbf63b661e7419d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676828123533234279, guid: 5ae6bfef14e480d40bbf63b661e7419d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4880805
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676828123533234279, guid: 5ae6bfef14e480d40bbf63b661e7419d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.644425
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676828123533234279, guid: 5ae6bfef14e480d40bbf63b661e7419d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676828123533234279, guid: 5ae6bfef14e480d40bbf63b661e7419d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676828123533234279, guid: 5ae6bfef14e480d40bbf63b661e7419d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676828123533234279, guid: 5ae6bfef14e480d40bbf63b661e7419d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676828123533234279, guid: 5ae6bfef14e480d40bbf63b661e7419d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676828123533234279, guid: 5ae6bfef14e480d40bbf63b661e7419d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676828123533234279, guid: 5ae6bfef14e480d40bbf63b661e7419d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1676828123533234278, guid: 5ae6bfef14e480d40bbf63b661e7419d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1685988043}
+  m_SourcePrefab: {fileID: 100100000, guid: 5ae6bfef14e480d40bbf63b661e7419d, type: 3}
 --- !u!1 &1273458657 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2202827337060906512, guid: 8d1802d73be222d4aac7de5de0c12bc0, type: 3}
@@ -391,6 +455,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1685988042 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1676828123533234278, guid: 5ae6bfef14e480d40bbf63b661e7419d, type: 3}
+  m_PrefabInstance: {fileID: 1212912681}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1685988043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685988042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a82bea58ea18f064cac4d8686c5e4ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: a8b7e8d1edc3dd64ba06708311eab1cb, type: 2}
+  musicSlider: {fileID: 0}
+  sfxSlider: {fileID: 0}
 --- !u!1 &1752976050
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,3 +729,4 @@ SceneRoots:
   - {fileID: 228856745}
   - {fileID: 2100681745}
   - {fileID: 1752976051}
+  - {fileID: 1212912681}
