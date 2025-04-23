@@ -14,6 +14,7 @@ public class BattleHandler : MonoBehaviour
     public int Stack = 0;
     public bool Increased;
     public int PlayerHealth;
+    public int enemyHealth;
     private CharacterBattle playerCharacterBattle;
     private CharacterBattle enemyCharacterBattle;
     private CharacterBattle Attack;
@@ -21,10 +22,10 @@ public class BattleHandler : MonoBehaviour
     public string DeathScene = "Main menu";
     private State state;
 
-
     private IronMaden IronMaden;
 
-    public Healthsystem Healthsystem;
+    public Healthsystem enemySystem;
+    public Healthsystem playerSystem;
 
     public Transform PFHealthBar;
 
@@ -46,36 +47,33 @@ public class BattleHandler : MonoBehaviour
         SetActiveCharacterBattle(playerCharacterBattle);
         
         //Enemy
-        Healthsystem healthSystem = new Healthsystem(100);
+        enemySystem = new Healthsystem(100);
+        enemyHealth = enemySystem.health;
         Transform HealthBartransform = Instantiate(PFHealthBar, new Vector3(0, 6), Quaternion.identity);
         HealthBar healthBar = HealthBartransform.GetComponent<HealthBar>();
-        healthBar.Setup(healthSystem);
+        healthBar.Setup(enemySystem);
 
        
-        Debug.Log("Health:" + healthSystem.GetHealthPercent());
-        healthSystem.Damage(10);
-        Debug.Log("Health:" + healthSystem.GetHealthPercent());
-        playerCharacterBattle.Setup(true, healthSystem);
+        playerCharacterBattle.Setup(true, enemySystem);
            
         //Player
-        Healthsystem healthSystem2 = new Healthsystem(100);
-        PlayerHealth = healthSystem2.health ;
+        playerSystem = new Healthsystem(100);
+        PlayerHealth = playerSystem.health;
         Transform HealthBartransform2 = Instantiate(PFHealthBar, new Vector3(0, -5), Quaternion.identity);
         HealthBar healthBar2 = HealthBartransform2.GetComponent<HealthBar>();
-        healthBar2.Setup(healthSystem2);
-       
-
-        Debug.Log("Health:" + healthSystem2.GetHealthPercent());
-        healthSystem2.Damage(10);
-        Debug.Log("Health:" + healthSystem2.GetHealthPercent());
+        healthBar2.Setup(playerSystem);
+      
 
        
         
 
 
-        enemyCharacterBattle.Setup(true, healthSystem2);
+        enemyCharacterBattle.Setup(true, playerSystem);
 
 
+        enemySystem.battleHandler = this;
+        playerSystem.battleHandler = this;
+        
         // Debug.Log("Health:" + healthSystem.GetHealth());
         //healthSystem.Heal(40);
         //Debug.Log("Health:" + healthSystem.GetHealth());
@@ -84,9 +82,8 @@ public class BattleHandler : MonoBehaviour
 
     private void Update()
     {
-        
-           
-        
+        enemyHealth = enemySystem.health;
+        PlayerHealth = playerSystem.health;
         Debug.Log(PlayerHealth);
         if (state == State.WaitingForPlayer)
         {
@@ -98,7 +95,7 @@ public class BattleHandler : MonoBehaviour
                 playerCharacterBattle.Attack(enemyCharacterBattle, () =>
                 {
                     ChooseNextActiveCharacter();
-
+                   
 
                 });
             }

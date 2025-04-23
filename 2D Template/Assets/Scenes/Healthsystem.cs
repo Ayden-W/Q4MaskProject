@@ -1,10 +1,11 @@
 
 using System;
+using System.Diagnostics;
 using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 public class Healthsystem 
 {
-    BattleHandler battleHandler;
+    public BattleHandler battleHandler;
     public event EventHandler OnHealthChanged;
     public int health;
     private int MaxHealth;
@@ -28,16 +29,23 @@ public class Healthsystem
     }
     public void Damage(int damageAmount)
     {
+        
 
         health -= damageAmount;
-        if (health < 0) 
+        if (health <= 0) 
         { 
             health = 0;
 
+            //playerHealth
+            if (battleHandler.enemyHealth == 0)
+            {
+                SceneManager.LoadScene("Main menu");
+            } 
+
+            //Actulay enemy health
             if (battleHandler.PlayerHealth <= 0)
             {
-
-                SceneManager.LoadScene("Main menu");
+                //win
             }
         }
 
@@ -46,7 +54,8 @@ public class Healthsystem
         if (OnHealthChanged != null)
         {
             OnHealthChanged(this, EventArgs.Empty);
-           
+            
+
         }
         
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 public class CharacterBattle : MonoBehaviour
 {
    
-    private Healthsystem healthSystem;
+    public Healthsystem healthSystem;
     public HealthBar healthBar;
 
     private State state;
