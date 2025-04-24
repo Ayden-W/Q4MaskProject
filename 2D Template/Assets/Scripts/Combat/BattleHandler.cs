@@ -11,11 +11,10 @@ public class BattleHandler : MonoBehaviour
     public int EnemyspawnY = 0;
     public int PlayerspawnX = -4;
     public int PlayerspawnY = 0;
-    public bool IsBoss;
     public int Stack = 0;
     public bool Increased;
     public int PlayerHealth;
-    public int enemyHealth = 100;
+    public int enemyHealth;
     private CharacterBattle playerCharacterBattle;
     private CharacterBattle enemyCharacterBattle;
     private CharacterBattle Attack;
@@ -25,6 +24,8 @@ public class BattleHandler : MonoBehaviour
 
     private IronMaden IronMaden;
 
+
+    PlayerData PlayerData;
     public Healthsystem enemySystem;
     public Healthsystem playerSystem;
 
@@ -38,7 +39,6 @@ public class BattleHandler : MonoBehaviour
 
     private void Start()
     {
-        
         //Instantiate(pfCharacter, new Vector3(PlayerspawnX, PlayerspawnY), Quaternion.identity);
         //Instantiate(pfEnemy, new Vector3(EnemyspawnX, EnemyspawnY), Quaternion.identity); 
 
@@ -47,26 +47,19 @@ public class BattleHandler : MonoBehaviour
         enemyCharacterBattle = SpawnCharacter(false);
         state = State.WaitingForPlayer;
         SetActiveCharacterBattle(playerCharacterBattle);
-        //boss
-       
         
-        if (IsBoss == true)
-        {
-            enemyHealth = 275;
-        }
         //Enemy
-        enemySystem = new Healthsystem(enemyHealth);
+        enemySystem = new Healthsystem(100);
         enemyHealth = enemySystem.health;
         Transform HealthBartransform = Instantiate(PFHealthBar, new Vector3(0, 6), Quaternion.identity);
         HealthBar healthBar = HealthBartransform.GetComponent<HealthBar>();
         healthBar.Setup(enemySystem);
 
-        
        
         playerCharacterBattle.Setup(true, enemySystem);
            
         //Player
-        playerSystem = new Healthsystem(100);
+        playerSystem = new Healthsystem(playerHealth.MaxHealth);
         PlayerHealth = playerSystem.health;
         Transform HealthBartransform2 = Instantiate(PFHealthBar, new Vector3(0, -5), Quaternion.identity);
         HealthBar healthBar2 = HealthBartransform2.GetComponent<HealthBar>();
