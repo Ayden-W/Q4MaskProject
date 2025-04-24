@@ -38,6 +38,7 @@ public class BattleHandler : MonoBehaviour
 
     private void Start()
     {
+        
         //Instantiate(pfCharacter, new Vector3(PlayerspawnX, PlayerspawnY), Quaternion.identity);
         //Instantiate(pfEnemy, new Vector3(EnemyspawnX, EnemyspawnY), Quaternion.identity); 
 
@@ -46,7 +47,13 @@ public class BattleHandler : MonoBehaviour
         enemyCharacterBattle = SpawnCharacter(false);
         state = State.WaitingForPlayer;
         SetActiveCharacterBattle(playerCharacterBattle);
+        //boss
+       
         
+        if (IsBoss == true)
+        {
+            enemyHealth = 275;
+        }
         //Enemy
         enemySystem = new Healthsystem(enemyHealth);
         enemyHealth = enemySystem.health;
@@ -54,11 +61,7 @@ public class BattleHandler : MonoBehaviour
         HealthBar healthBar = HealthBartransform.GetComponent<HealthBar>();
         healthBar.Setup(enemySystem);
 
-        //boss
-        if (IsBoss == true)
-        {
-            enemyHealth = 275;
-        }
+        
        
         playerCharacterBattle.Setup(true, enemySystem);
            
