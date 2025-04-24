@@ -7,34 +7,34 @@ public class Healthsystem
 {
     public BattleHandler battleHandler;
     public event EventHandler OnHealthChanged;
-    public int health;
-    private int MaxHealth;
-   
+    //public int health;
+    //public int MaxHealth;
+    PlayerData PlayerData;
 
 
-    
-    
+
+
     public Healthsystem(int Maxhealth) 
     {
-        this.MaxHealth = Maxhealth;
-        health = Maxhealth;
+        this.PlayerData.MaxHealth = Maxhealth;
+        PlayerData.health = Maxhealth;
     }   
     public int GetHealth()
     {
-        return health;
+        return PlayerData.health;
     }
     public float GetHealthPercent()
     {
-        return (float) health / MaxHealth;
+        return (float) PlayerData.health / PlayerData.MaxHealth;
     }
     public void Damage(int damageAmount)
     {
-        
 
-        health -= damageAmount;
-        if (health <= 0) 
-        { 
-            health = 0;
+
+        PlayerData.health -= damageAmount;
+        if (PlayerData.health <= 0) 
+        {
+            PlayerData.health = 0;
 
             //playerHealth
             if (battleHandler.enemyHealth == 0)
@@ -61,11 +61,24 @@ public class Healthsystem
     }
     public void Heal(int healAmount)
     {
-        health += healAmount;
-        if (health > MaxHealth) health = MaxHealth;
+        PlayerData.health += healAmount;
+        if (PlayerData.health > PlayerData.MaxHealth) PlayerData.health = PlayerData.MaxHealth;
         if (OnHealthChanged != null) OnHealthChanged(this, EventArgs.Empty);
     }
-   
 
-    
+    public void SavePlayer()
+    {
+        DataManagement.SavePlayer(this);
+    }
+
+    public void LoadPlayer()
+    {
+        PlayerData data = DataManagement.LoadPlayer();
+
+        PlayerData.health = data.health;
+        PlayerData.MaxHealth = data.MaxHealth;
+
+    }
+
+
 }

@@ -3,10 +3,12 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerData
 {
-    public int health;
 
-    public PlayerData (BattleHandler player)
+    public PlayerData(Healthsystem playerHealth)
     {
-        health = player.PlayerHealth;
+        public int health;
+        public int MaxHealth;
+        //health = playerHealth.health;
+        //MaxHealth = playerHealth.MaxHealth;
     }
 }
