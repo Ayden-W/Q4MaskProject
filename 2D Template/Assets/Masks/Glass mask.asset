@@ -25,5 +25,4 @@ MonoBehaviour:
   Discardable: 1
   yes: {fileID: 11400000, guid: e158257fe9eec494c9ec38eeabfd3659, type: 2}
   SkillList: []
-  PassiveList:
-  - {fileID: 11400000, guid: e158257fe9eec494c9ec38eeabfd3659, type: 2}
+  PassiveList: []
