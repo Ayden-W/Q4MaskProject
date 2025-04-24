@@ -11,10 +11,11 @@ public class BattleHandler : MonoBehaviour
     public int EnemyspawnY = 0;
     public int PlayerspawnX = -4;
     public int PlayerspawnY = 0;
+    public bool IsBoss;
     public int Stack = 0;
     public bool Increased;
     public int PlayerHealth;
-    public int enemyHealth;
+    public int enemyHealth = 100;
     private CharacterBattle playerCharacterBattle;
     private CharacterBattle enemyCharacterBattle;
     private CharacterBattle Attack;
@@ -47,12 +48,17 @@ public class BattleHandler : MonoBehaviour
         SetActiveCharacterBattle(playerCharacterBattle);
         
         //Enemy
-        enemySystem = new Healthsystem(100);
+        enemySystem = new Healthsystem(enemyHealth);
         enemyHealth = enemySystem.health;
         Transform HealthBartransform = Instantiate(PFHealthBar, new Vector3(0, 6), Quaternion.identity);
         HealthBar healthBar = HealthBartransform.GetComponent<HealthBar>();
         healthBar.Setup(enemySystem);
 
+        //boss
+        if (IsBoss == true)
+        {
+            enemyHealth = 275;
+        }
        
         playerCharacterBattle.Setup(true, enemySystem);
            
