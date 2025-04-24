@@ -1,14 +1,39 @@
 using UnityEngine;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
-public class DataManagement : MonoBehaviour
+public static class DataManagement
 {
-    // This is for later use no touchie.......
-    // ...
-    // No
-    // Uh still no
-    // Hey uhm the thing is still no
-    // The no is still well the no
-    // Go elsewhere till it's put in.
-    // It as in the script.
-    // -._.-
+    public static void SavePlayer(BattleHandler player)
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+
+        string path = Application.persistentDataPath + "/player.TunaMayo";
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        PlayerData data = new PlayerData(player);
+
+        formatter.Serialize(stream, data);
+        stream.Close();
+    }
+
+    public static PlayerData LoadPlayer()
+    { 
+        string path = Application.persistentDataPath + "/player.TunaMayo";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+           PlayerData data = formatter.Deserialize(stream) as PlayerData;
+            stream.Close();
+
+            return data;
+        }
+        else
+        {
+            Debug.LogError("Saved? HA! No. " + path);
+                return null;
+        }
+    }
 }
