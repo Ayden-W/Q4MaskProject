@@ -24,7 +24,7 @@ public class BattleHandler : MonoBehaviour
 
     private IronMaden IronMaden;
 
-
+    EnemyData EnemyData;
     PlayerData PlayerData;
     public Healthsystem enemySystem;
     public Healthsystem playerSystem;
@@ -49,8 +49,8 @@ public class BattleHandler : MonoBehaviour
         SetActiveCharacterBattle(playerCharacterBattle);
         
         //Enemy
-        enemySystem = new Healthsystem(100);
-        enemyHealth = enemySystem.health;
+        enemySystem = new Healthsystem(EnemyData._EHM);
+        enemyHealth = EnemyData._EH;
         Transform HealthBartransform = Instantiate(PFHealthBar, new Vector3(0, 6), Quaternion.identity);
         HealthBar healthBar = HealthBartransform.GetComponent<HealthBar>();
         healthBar.Setup(enemySystem);
@@ -59,8 +59,8 @@ public class BattleHandler : MonoBehaviour
         playerCharacterBattle.Setup(true, enemySystem);
            
         //Player
-        playerSystem = new Healthsystem(playerHealth.MaxHealth);
-        PlayerHealth = playerSystem.health;
+        playerSystem = new Healthsystem(PlayerData.MaxHealth);
+        PlayerHealth = PlayerData.health;
         Transform HealthBartransform2 = Instantiate(PFHealthBar, new Vector3(0, -5), Quaternion.identity);
         HealthBar healthBar2 = HealthBartransform2.GetComponent<HealthBar>();
         healthBar2.Setup(playerSystem);
@@ -84,8 +84,8 @@ public class BattleHandler : MonoBehaviour
 
     private void Update()
     {
-        enemyHealth = enemySystem.health;
-        PlayerHealth = playerSystem.health;
+        enemyHealth = EnemyData._EH;
+        PlayerHealth = PlayerData.health;
         Debug.Log(PlayerHealth);
         if (state == State.WaitingForPlayer)
         {

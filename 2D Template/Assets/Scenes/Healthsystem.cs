@@ -10,7 +10,7 @@ public class Healthsystem
     //public int health;
     //public int MaxHealth;
     PlayerData PlayerData;
-
+    EnemyData EnemyData;
 
 
 
@@ -66,19 +66,7 @@ public class Healthsystem
         if (OnHealthChanged != null) OnHealthChanged(this, EventArgs.Empty);
     }
 
-    public void SavePlayer()
-    {
-        DataManagement.SavePlayer(this);
-    }
-
-    public void LoadPlayer()
-    {
-        PlayerData data = DataManagement.LoadPlayer();
-
-        PlayerData.health = data.health;
-        PlayerData.MaxHealth = data.MaxHealth;
-
-    }
+    
 
 
 }
