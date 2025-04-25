@@ -6,11 +6,11 @@ public class SpawnPoint : MonoBehaviour
     public BattleHandler BattleHandler;
     public struct EnemyInstantiate
     {
-        enemySystem = new Healthsystem(enemyHealth);
-        enemyHealth = enemySystem.health;
-        Transform HealthBartransform = Instantiate(PFHealthBar, new Vector3(0, 6), Quaternion.identity);
-        HealthBar healthBar = HealthBartransform.GetComponent<HealthBar>();
-        healthBar.Setup(enemySystem);
+        //enemySystem = new Healthsystem(enemyHealth);
+        //enemyHealth = enemySystem.health;
+        //Transform HealthBartransform = Instantiate(PFHealthBar, new Vector3(0, 6), Quaternion.identity);
+        //HealthBar healthBar = HealthBartransform.GetComponent<HealthBar>();
+        //healthBar.Setup(enemySystem);
     }
     public GameObject[] spawnpoint;
 
