@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Antler Mask
   SellPrice: 0
   Cost: 0
-  Description: 
+  Description: A mask covered in antlers
   Discardable: 0
   yes: {fileID: 0}
   SkillList: []
