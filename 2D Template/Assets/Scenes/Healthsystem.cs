@@ -18,7 +18,10 @@ public class Healthsystem
     {
         this.PlayerData.MaxHealth = Maxhealth;
         PlayerData.health = Maxhealth;
+
+
     }   
+
     public int GetHealth()
     {
         return PlayerData.health;
@@ -39,6 +42,7 @@ public class Healthsystem
             //playerHealth
             if (battleHandler.enemyHealth == 0)
             {
+                
                 SceneManager.LoadScene("Main menu");
             } 
 
@@ -66,7 +70,11 @@ public class Healthsystem
         if (OnHealthChanged != null) OnHealthChanged(this, EventArgs.Empty);
     }
 
-    
+    public void EHP(int _EHMP)
+    {
+        this.EnemyData._EHM = _EHMP;
+        this.EnemyData._EH = _EHMP;
+    }
 
 
 }

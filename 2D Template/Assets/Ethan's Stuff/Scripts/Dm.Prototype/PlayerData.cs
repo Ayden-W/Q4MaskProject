@@ -3,8 +3,8 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerData
 {
-        public int health;
-        public int MaxHealth;
+        public int health = 175;
+        public int MaxHealth = 175;
 
     public PlayerData(PlayerData playerHealth)
     {
