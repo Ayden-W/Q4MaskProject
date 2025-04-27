@@ -153,6 +153,11 @@ MonoBehaviour:
   max: 5
   xSpacing: 2
   nodeGroup: {fileID: 1752976050}
+  Icons:
+  - {fileID: -5296577930553689327, guid: 79797d10d0ff3bc4bb4ae89812c9b904, type: 3}
+  - {fileID: -8046865092374316919, guid: c200a5a65f86ee74c8394f06057754f6, type: 3}
+  - {fileID: 797804464768463050, guid: 1ce2474ed8788d24a975d1541812c5ca, type: 3}
+  - {fileID: -7053808625343089603, guid: 7a0a1722f27b07540b2105037bbdd857, type: 3}
 --- !u!4 &228856745
 Transform:
   m_ObjectHideFlags: 0
@@ -484,7 +489,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1752976051}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: NodeGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -518,7 +523,7 @@ GameObject:
   - component: {fileID: 2100681745}
   - component: {fileID: 2100681744}
   - component: {fileID: 2100681743}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: LineRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -670,6 +675,10 @@ PrefabInstance:
     - target: {fileID: 2202827337060906512, guid: 8d1802d73be222d4aac7de5de0c12bc0, type: 3}
       propertyPath: m_Name
       value: Node
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202827337060906512, guid: 8d1802d73be222d4aac7de5de0c12bc0, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4909518876463894888, guid: 8d1802d73be222d4aac7de5de0c12bc0, type: 3}
       propertyPath: node

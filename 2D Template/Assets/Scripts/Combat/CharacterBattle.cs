@@ -19,7 +19,8 @@ public class CharacterBattle : MonoBehaviour
         Busy2,
     }
 
-
+    public PlayerData playerData;
+    public EnemyData enemyData;
    
 
     private void Awake()

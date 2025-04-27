@@ -5,7 +5,8 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - node: {fileID: 2202827337060906512, guid: 8d1802d73be222d4aac7de5de0c12bc0, type: 3}
-  - Icon: {instanceID: 0}
+  - Icon: {fileID: 1334448161612132182, guid: 79ee41edaef42794d8b69fcfbeabff89, type: 3}
+  - Next: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

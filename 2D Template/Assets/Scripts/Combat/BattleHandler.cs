@@ -24,8 +24,8 @@ public class BattleHandler : MonoBehaviour
 
     private IronMaden IronMaden;
 
-    EnemyData EnemyData;
-    PlayerData PlayerData;
+    public EnemyData EnemyData;
+    public PlayerData PlayerData;
     public Healthsystem enemySystem;
     public Healthsystem playerSystem;
 
