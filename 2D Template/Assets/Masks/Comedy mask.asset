@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a56bd3b0c92cc498dafc3079581113, type: 3}
   m_Name: Comedy mask
   m_EditorClassIdentifier: 
-  ID: 11
+  ID: 2
   itemName: Comedy mask
   SellPrice: 0
   Cost: 0
