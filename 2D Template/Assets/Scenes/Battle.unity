@@ -171,11 +171,7 @@ MonoBehaviour:
   PlayerspawnY: -3
   Stack: 0
   Increased: 0
-<<<<<<< HEAD
-  PlayerHealth: 0
-  enemyHealth: 100
-  DeathScene: Main menu
-=======
+
   PlayerHealth: 175
   enemyHealth: 100
   DeathScene: Main menu
@@ -187,7 +183,7 @@ MonoBehaviour:
     health: 175
     MaxHealth: 175
     damageBase: 0
->>>>>>> cf5bc6f801fc295efc00fe504cf814b5f14dd927
+
   PFHealthBar: {fileID: 3198604661988604405, guid: 6af9a020ac416984da40363a46044b8c, type: 3}
 --- !u!1 &949305185
 GameObject:

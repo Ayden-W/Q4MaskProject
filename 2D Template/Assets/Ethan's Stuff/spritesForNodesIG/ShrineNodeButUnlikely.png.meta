@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ShrineNodeButUnlikely_0: 797804464768463050
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

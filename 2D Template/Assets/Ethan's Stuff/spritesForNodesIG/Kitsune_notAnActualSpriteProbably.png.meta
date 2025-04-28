@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Kitsune_notAnActualSpriteProbably_0: -5485484345264739283
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
