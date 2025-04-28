@@ -5,7 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Fight : NodeList
 {
+    private int RandomInt;
+    private void Start()
+    {
 
+
+    }
     //[SerializeField] public GameObject node;
     //[SerializeField] public Sprite Icon;
     //[SerializeField] public string Type;
@@ -19,7 +24,15 @@ public class Fight : NodeList
 
     public override void OnClick()
     {
-        SceneManager.LoadScene("Combat test");
+
+        RandomInt = Random.Range(0, 50);
+        if (RandomInt < 50)
+        {
+            SceneManager.LoadScene("Combat test");
+        }
+       // else { "Other scenes" }
+
+        // create a diffrent script for boss fights
     }
 
 }
