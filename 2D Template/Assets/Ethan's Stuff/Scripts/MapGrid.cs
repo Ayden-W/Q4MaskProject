@@ -18,7 +18,7 @@ public class MapGrid : MonoBehaviour
     Sensor sensor;
     DetectNode detectNode;
     public GameObject nodeGroup;
-    
+    public Sprite[] Icons;
     private void Awake()
     {
         sensor = GetComponent<Sensor>();
@@ -44,52 +44,72 @@ public class MapGrid : MonoBehaviour
             if (r == 0)
             {
                 nodeList=nodeListGo.AddComponent<Heal>();
+                nodeList.GetComponent<SpriteRenderer>().sprite = Icons[2];
                 nodeList2= Nodelist2Go.AddComponent<Heal>();
+                nodeList2.GetComponent<SpriteRenderer>().sprite = Icons[2];
             }
             else if (r  == 1)
             {
                 nodeList =nodeListGo.AddComponent<Shop>();
+                nodeList.GetComponent<SpriteRenderer>().sprite = Icons[1];
                 nodeList2 = Nodelist2Go.AddComponent<Shop>();
+                nodeList2.GetComponent<SpriteRenderer>().sprite = Icons[1];
             }
             else if (r == 2)
             {
                 nodeList = nodeListGo.AddComponent<BossFight>();
+                nodeList.GetComponent<SpriteRenderer>().sprite = Icons[3];
                 nodeList2 = Nodelist2Go.AddComponent<BossFight>();
+                nodeList2.GetComponent<SpriteRenderer>().sprite = Icons[3];
             }
             else if (r == 3)
             {
                 nodeList = nodeListGo.AddComponent<Fight>();
+                nodeList.GetComponent<SpriteRenderer>().sprite = Icons[0];
                 nodeList2 = Nodelist2Go.AddComponent<Fight>();
+                nodeList2.GetComponent<SpriteRenderer>().sprite = Icons[0];
             }
             else if (r == 4)
             {
                 nodeList = nodeListGo.AddComponent<Fight>();
+                nodeList.GetComponent<SpriteRenderer>().sprite = Icons[0];
                 nodeList2 = Nodelist2Go.AddComponent<Fight>();
+                nodeList2.GetComponent<SpriteRenderer>().sprite = Icons[0];
             }
             else if (r == 5)
             {
                 nodeList = nodeListGo.AddComponent<Fight>();
+                nodeList.GetComponent<SpriteRenderer>().sprite = Icons[0];
                 nodeList2 = Nodelist2Go.AddComponent<Fight>();
+                nodeList2.GetComponent<SpriteRenderer>().sprite = Icons[0];
             }
             else if (r == 6)
             {
                 nodeList = nodeListGo.AddComponent<Fight>();
+                nodeList.GetComponent<SpriteRenderer>().sprite = Icons[0];
                 nodeList2 = Nodelist2Go.AddComponent<Fight>();
+                nodeList2.GetComponent<SpriteRenderer>().sprite = Icons[0];
             }
             else if (r == 7)
             {
                 nodeList = nodeListGo.AddComponent<Heal>();
+                nodeList.GetComponent<SpriteRenderer>().sprite = Icons[2];
                 nodeList2 = Nodelist2Go.AddComponent<Heal>();
+                nodeList2.GetComponent<SpriteRenderer>().sprite = Icons[2];
             }   
             else if (r ==8)
             {
                 nodeList = nodeListGo.AddComponent<Heal>();
+                nodeList.GetComponent<SpriteRenderer>().sprite = Icons[2];
                 nodeList2 = Nodelist2Go.AddComponent<Heal>();
+                nodeList2.GetComponent<SpriteRenderer>().sprite = Icons[2];
             }
             else
             {
                 nodeList = nodeListGo.AddComponent<Shop>();
+                nodeList.GetComponent<SpriteRenderer>().sprite = Icons[1];
                 nodeList2 = Nodelist2Go.AddComponent<Shop>();
+                nodeList2.GetComponent<SpriteRenderer>().sprite = Icons[1];
             }
 
             /*LineRenderer lr = FindFirstObjectByType<LineRenderer>();*/ // Grabs the LineRenderer
