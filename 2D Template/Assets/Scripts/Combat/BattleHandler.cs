@@ -11,10 +11,11 @@ public class BattleHandler : MonoBehaviour
     public int EnemyspawnY = 0;
     public int PlayerspawnX = -4;
     public int PlayerspawnY = 0;
+    public bool IsBoss;
     public int Stack = 0;
     public bool Increased;
     public int PlayerHealth;
-    public int enemyHealth;
+    public int enemyHealth = 100;
     private CharacterBattle playerCharacterBattle;
     private CharacterBattle enemyCharacterBattle;
     private CharacterBattle Attack;
@@ -24,8 +25,6 @@ public class BattleHandler : MonoBehaviour
 
     private IronMaden IronMaden;
 
-    public EnemyData EnemyData;
-    public PlayerData PlayerData;
     public Healthsystem enemySystem;
     public Healthsystem playerSystem;
 
@@ -39,6 +38,7 @@ public class BattleHandler : MonoBehaviour
 
     private void Start()
     {
+        
         //Instantiate(pfCharacter, new Vector3(PlayerspawnX, PlayerspawnY), Quaternion.identity);
         //Instantiate(pfEnemy, new Vector3(EnemyspawnX, EnemyspawnY), Quaternion.identity); 
 
@@ -47,22 +47,27 @@ public class BattleHandler : MonoBehaviour
         enemyCharacterBattle = SpawnCharacter(false);
         state = State.WaitingForPlayer;
         SetActiveCharacterBattle(playerCharacterBattle);
-
+        //boss
+       
+        
+        if (IsBoss == true)
+        {
+            enemyHealth = 275;
+        }
         //Enemy
-        //enemySystem = new Healthsystem(EnemyData._EHM);
-        enemySystem = new Healthsystem(EnemyData._EHM);
-        enemyHealth = EnemyData._EH;
-        //enemyHealth = EnemyData._EH;
+        enemySystem = new Healthsystem(enemyHealth);
+        enemyHealth = enemySystem.health;
         Transform HealthBartransform = Instantiate(PFHealthBar, new Vector3(0, 6), Quaternion.identity);
         HealthBar healthBar = HealthBartransform.GetComponent<HealthBar>();
         healthBar.Setup(enemySystem);
 
+        
        
         playerCharacterBattle.Setup(true, enemySystem);
            
         //Player
-        playerSystem = new Healthsystem(PlayerData.MaxHealth);
-        PlayerHealth = PlayerData.health;
+        playerSystem = new Healthsystem(100);
+        PlayerHealth = playerSystem.health;
         Transform HealthBartransform2 = Instantiate(PFHealthBar, new Vector3(0, -5), Quaternion.identity);
         HealthBar healthBar2 = HealthBartransform2.GetComponent<HealthBar>();
         healthBar2.Setup(playerSystem);
@@ -86,8 +91,8 @@ public class BattleHandler : MonoBehaviour
 
     private void Update()
     {
-        enemyHealth = EnemyData._EH;
-        PlayerHealth = PlayerData.health;
+        enemyHealth = enemySystem.health;
+        PlayerHealth = playerSystem.health;
         Debug.Log(PlayerHealth);
         if (state == State.WaitingForPlayer)
         {
