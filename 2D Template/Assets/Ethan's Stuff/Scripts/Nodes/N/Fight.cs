@@ -19,7 +19,7 @@ public class Fight : NodeList
 
     public override void OnClick()
     {
-        SceneManager.LoadScene("Encounter");
+        SceneManager.LoadScene("Combat test");
     }
 
 }

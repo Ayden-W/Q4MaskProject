@@ -169,21 +169,6 @@ MonoBehaviour:
   EnemyspawnY: 3
   PlayerspawnX: 0
   PlayerspawnY: -3
-  Stack: 0
-  Increased: 0
-
-  PlayerHealth: 175
-  enemyHealth: 100
-  DeathScene: Main menu
-  EnemyData:
-    _EH: 100
-    _EHM: 100
-    _EDMG: 0
-  PlayerData:
-    health: 175
-    MaxHealth: 175
-    damageBase: 0
-
   PFHealthBar: {fileID: 3198604661988604405, guid: 6af9a020ac416984da40363a46044b8c, type: 3}
 --- !u!1 &949305185
 GameObject:
@@ -322,41 +307,9 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!1 &1905371262
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1905371264}
-  m_Layer: 0
-  m_Name: Spawnpoint1
-  m_TagString: Spawnpoint1
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1905371264
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1905371262}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.19, y: 3.85, z: -0.100658484}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 949305188}
   - {fileID: 736619932}
-  - {fileID: 1905371264}
