@@ -18,11 +18,6 @@ public class CharacterBattle : MonoBehaviour
         Sliding,
         Busy2,
     }
-
-    public PlayerData playerData;
-    public EnemyData enemyData;
-   
-
     private void Awake()
     {
 

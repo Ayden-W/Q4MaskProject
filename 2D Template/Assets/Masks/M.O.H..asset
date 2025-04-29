@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a56bd3b0c92cc498dafc3079581113, type: 3}
   m_Name: M.O.H.
   m_EditorClassIdentifier: 
-  ID: 16
+  ID: 7
   itemName: Mask of Humanity
   SellPrice: 0
   Cost: 0
-  Description: 
+  Description: A Mask that is based around humanity (It's depressing)
   Discardable: 0
   yes: {fileID: 0}
   SkillList: []
