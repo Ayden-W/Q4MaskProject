@@ -6,11 +6,7 @@ using UnityEngine.SceneManagement;
 public class Fight : NodeList
 {
     private int RandomInt;
-    private void Start()
-    {
-
-
-    }
+    
     //[SerializeField] public GameObject node;
     //[SerializeField] public Sprite Icon;
     //[SerializeField] public string Type;

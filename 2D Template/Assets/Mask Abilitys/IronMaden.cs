@@ -24,6 +24,7 @@ public class IronMaden : MonoBehaviour
         {
             BloodStacks = 7;
             healthSystem.Damage(10);
+            
         }
     }
 
