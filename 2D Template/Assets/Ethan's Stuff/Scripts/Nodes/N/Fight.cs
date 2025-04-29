@@ -28,7 +28,7 @@ public class Fight : NodeList
         RandomInt = Random.Range(0, 50);
         if (RandomInt < 50)
         {
-            SceneManager.LoadScene("Combat test");
+            SceneManager.LoadScene("Battle");
         }
        // else { "Other scenes" }
 
