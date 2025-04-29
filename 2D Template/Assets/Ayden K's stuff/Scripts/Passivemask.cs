@@ -10,6 +10,7 @@ public class Passivemask : MaskSystem
     public PassiveAbilitys yes;     
     public List<ScriptableObject> SkillList;
     public List<ScriptableObject> PassiveList;
+    public Healthsystem Healthsystem;
 
     public override void OnEquip(Playerscript player)
     {        

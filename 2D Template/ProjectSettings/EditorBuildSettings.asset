@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Ayden K's stuff/Scenes/Credits.unity
     guid: d52d21556bf979b4cb746bc815089cd6
+  - enabled: 1
+    path: Assets/Ayden K's stuff/Scenes/AydenK.unity
+    guid: f64ee940588df79469b1027fdf5d35a1
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

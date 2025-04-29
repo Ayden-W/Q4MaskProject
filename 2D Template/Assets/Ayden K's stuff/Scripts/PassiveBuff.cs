@@ -7,6 +7,8 @@ public abstract class PassiveBuff : ScriptableObject
     //Stat bonuses and defects
     public float DMG;
     public float Defence;
+    //Healing amount
+    public float Healing;
 
     public abstract void Passives();
 }
