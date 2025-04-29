@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a0a7975fbc9eb4e862f6ca1f973613, type: 3}
   m_Name: GlassPassive
   m_EditorClassIdentifier: 
-  ID: 9
+  ID: 3
   Name: Glass
   DMG: 1.35
   Defence: 0.75
+  Healing: 0

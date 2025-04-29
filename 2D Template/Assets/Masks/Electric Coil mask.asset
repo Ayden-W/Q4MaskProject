@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a56bd3b0c92cc498dafc3079581113, type: 3}
   m_Name: Electric Coil mask
   m_EditorClassIdentifier: 
-  ID: 3
+  ID: 2
   itemName: Electric Coil Mask
   SellPrice: 0
   Cost: 0
