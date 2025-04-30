@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a56bd3b0c92cc498dafc3079581113, type: 3}
-  m_Name: M.O.H.
+  m_Name: Locked in mask
   m_EditorClassIdentifier: 
-  ID: 5
-  itemName: Mask of Humanity
+  ID: 3
+  itemName: Locked in  mask
   SellPrice: 0
   Cost: 0
-  Description: A Mask that is based around humanity (It's depressing)
-  Discardable: 0
+  Description: A mask that makes you lock in and deal more damage
+  Discardable: 1
   yes: {fileID: 0}
   SkillList: []
   PassiveList: []
+  BattleHandler: {fileID: 0}

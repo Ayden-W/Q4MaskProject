@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a56bd3b0c92cc498dafc3079581113, type: 3}
-  m_Name: Electric Coil mask
+  m_Name: Mask of screams
   m_EditorClassIdentifier: 
-  ID: 2
-  itemName: Electric Coil Mask
+  ID: 6
+  itemName: Mask of screams
   SellPrice: 0
   Cost: 0
-  Description: A conductive mask that leaves a huge burst of shockingly high damage
+  Description: A screaming mask that does extra damage
   Discardable: 1
   yes: {fileID: 0}
   SkillList: []
   PassiveList: []
+  BattleHandler: {fileID: 0}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a56bd3b0c92cc498dafc3079581113, type: 3}
   m_Name: Glass mask
   m_EditorClassIdentifier: 
-  ID: 3
+  ID: 2
   itemName: Glass mask
   SellPrice: 5
   Cost: 7
@@ -26,3 +26,4 @@ MonoBehaviour:
   yes: {fileID: 11400000, guid: e158257fe9eec494c9ec38eeabfd3659, type: 2}
   SkillList: []
   PassiveList: []
+  BattleHandler: {fileID: 0}

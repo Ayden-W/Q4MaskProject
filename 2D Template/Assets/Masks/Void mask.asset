@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a56bd3b0c92cc498dafc3079581113, type: 3}
-  m_Name: Kitsune
+  m_Name: Void mask
   m_EditorClassIdentifier: 
-  ID: 4
-  itemName: Kitsune mask
+  ID: 9
+  itemName: Void mask
   SellPrice: 0
   Cost: 0
-  Description: This Mask resembling a fox makes those fall into disarray getting
-    lost in illusions
+  Description: A mask as dark as the void causing you to absorb hits and deal more
+    damage
   Discardable: 1
   yes: {fileID: 0}
   SkillList: []
   PassiveList: []
+  BattleHandler: {fileID: 0}
