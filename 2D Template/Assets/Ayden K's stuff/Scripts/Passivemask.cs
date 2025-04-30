@@ -11,6 +11,7 @@ public class Passivemask : MaskSystem
     public List<ScriptableObject> SkillList;
     public List<ScriptableObject> PassiveList;
     public Healthsystem Healthsystem;
+    public BattleHandler BattleHandler;
 
     public override void OnEquip(Playerscript player)
     {        
@@ -22,8 +23,10 @@ public class Passivemask : MaskSystem
         {
             player.Defence *= yes.Defence;
             player.Damage *= yes.DMG;
+            Healthsystem.Damage((int)(10f * yes.DMG));
             Debug.Log(player.Damage);
             Debug.Log(player.Defence);
+      
         }
         else
         {
@@ -42,5 +45,6 @@ public class Passivemask : MaskSystem
         // lower the player's stats
         player.Defence /= yes.Defence;
         player.Damage /= yes.DMG;
+        Healthsystem.Damage((int)(10f / yes.DMG));
     }
 }
