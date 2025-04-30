@@ -18,6 +18,6 @@ MonoBehaviour:
   Cost: 0
   Description: A mask covered in antlers
   Discardable: 0
-  yes: {fileID: 0}
+  yes: {fileID: 11400000, guid: dfa07e5ce1bf8dc4c9388e2a2116cb33, type: 2}
   SkillList: []
   PassiveList: []

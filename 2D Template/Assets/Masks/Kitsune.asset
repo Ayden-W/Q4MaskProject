@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a56bd3b0c92cc498dafc3079581113, type: 3}
   m_Name: Kitsune
   m_EditorClassIdentifier: 
-  ID: 6
+  ID: 4
   itemName: Kitsune mask
   SellPrice: 0
   Cost: 0
   Description: This Mask resembling a fox makes those fall into disarray getting
     lost in illusions
   Discardable: 1
+  yes: {fileID: 0}
+  SkillList: []
+  PassiveList: []

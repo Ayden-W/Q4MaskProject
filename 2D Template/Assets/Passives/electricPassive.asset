@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75a0a7975fbc9eb4e862f6ca1f973613, type: 3}
-  m_Name: GlassPassive
+  m_Name: electricPassive
   m_EditorClassIdentifier: 
-  ID: 3
-  Name: Glass
-  DMG: 1.35
-  Defence: 0.75
+  ID: 2
+  Name: electrc coil
+  DMG: 0
+  Defence: 0
   Healing: 0
