@@ -41,7 +41,14 @@ public class MapGrid : MonoBehaviour
             NodeList nodeList2;
 
             int r = Random.Range(0, 10);
-            if (r == 0)
+            if (i == 9)
+            {
+                nodeList = nodeListGo.AddComponent<Fight>();
+                nodeList.GetComponent<SpriteRenderer>().sprite = Icons[0];
+                nodeList2 = Nodelist2Go.AddComponent<BossFight>();
+                nodeList2.GetComponent<SpriteRenderer>().sprite = Icons[3];
+            }
+            else if (r == 0)
             {
                 nodeList=nodeListGo.AddComponent<Heal>();
                 nodeList.GetComponent<SpriteRenderer>().sprite = Icons[2];
@@ -57,10 +64,10 @@ public class MapGrid : MonoBehaviour
             }
             else if (r == 2)
             {
-                nodeList = nodeListGo.AddComponent<BossFight>();
-                nodeList.GetComponent<SpriteRenderer>().sprite = Icons[3];
-                nodeList2 = Nodelist2Go.AddComponent<BossFight>();
-                nodeList2.GetComponent<SpriteRenderer>().sprite = Icons[3];
+                nodeList = nodeListGo.AddComponent<Fight>();
+                nodeList.GetComponent<SpriteRenderer>().sprite = Icons[0];
+                nodeList2 = Nodelist2Go.AddComponent<Fight>();
+                nodeList2.GetComponent<SpriteRenderer>().sprite = Icons[0];
             }
             else if (r == 3)
             {

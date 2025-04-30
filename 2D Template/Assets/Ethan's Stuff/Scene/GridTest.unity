@@ -151,7 +151,7 @@ MonoBehaviour:
   node: {fileID: 1273458657}
   min: -4.5
   max: 4.5
-  xSpacing: 1.25
+  xSpacing: 1.3
   nodeGroup: {fileID: 1752976050}
   Icons:
   - {fileID: -5296577930553689327, guid: 79797d10d0ff3bc4bb4ae89812c9b904, type: 3}
@@ -254,8 +254,8 @@ Transform:
   m_GameObject: {fileID: 493281231}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.47044, y: -0.0008099973, z: 15}
-  m_LocalScale: {x: 20.834751, y: 15.6275015, z: 1}
+  m_LocalPosition: {x: 6.0804, y: -0.1683, z: 15}
+  m_LocalScale: {x: 36.315002, y: 22.432264, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -274,6 +274,7 @@ GameObject:
   - component: {fileID: 976264409}
   - component: {fileID: 976264410}
   - component: {fileID: 976264411}
+  - component: {fileID: 976264412}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -378,7 +379,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -429,6 +430,23 @@ MonoBehaviour:
   points:
   - {fileID: 1273458659}
   line: {fileID: 2100681743}
+--- !u!114 &976264412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976264405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 2b44d8362088e72499cba14800bd0d38, type: 2}
 --- !u!1001 &1212912681
 PrefabInstance:
   m_ObjectHideFlags: 0
