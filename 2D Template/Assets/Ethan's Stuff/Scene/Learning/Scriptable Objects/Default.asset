@@ -19,3 +19,6 @@ MonoBehaviour:
     damage: 10
     Inventory:
     - {fileID: 11400000, guid: f95950e5222725f4bb50fc271217e7d9, type: 2}
+    seed: 0
+    currentNode: 0
+    shouldGenerate: 1
