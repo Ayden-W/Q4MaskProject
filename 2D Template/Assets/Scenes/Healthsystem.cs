@@ -68,9 +68,6 @@ public class Healthsystem
         if (OnHealthChanged != null) OnHealthChanged(this, EventArgs.Empty);
     }
    
-  public void Update()
-    {
-        
-    }
+ 
     
 }
