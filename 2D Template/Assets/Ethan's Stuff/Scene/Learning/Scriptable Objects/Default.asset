@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 733d5cc44a79911499489d062ba78e7f, type: 3}
+  m_Name: Default
+  m_EditorClassIdentifier: 
+  value:
+    health: 175
+    maxHealth: 175
+    isAlive: 1
+    damage: 10
+    Inventory:
+    - {fileID: 11400000, guid: f95950e5222725f4bb50fc271217e7d9, type: 2}

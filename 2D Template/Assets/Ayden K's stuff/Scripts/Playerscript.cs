@@ -8,7 +8,7 @@ public class Playerscript : MonoBehaviour
     public float CurrentHealth;
     public float MaxHealth;
     public float TradeBeads;
-    public List<MaskSystem> Inventory;
+    
 
     public float Damage;
     public float Defence;
@@ -21,7 +21,7 @@ public class Playerscript : MonoBehaviour
 
     public void UpdateMasks()
     {
-        foreach (var item in Inventory)
+        foreach (var item in SaveDataController.Instance.Current.Inventory)
         {
             Debug.Log(item.name);
             item.OnEquip(this);

@@ -1,14 +1,17 @@
 
+using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
 public struct SaveData
 {
-    public Vector2 position;
-    public int currency;
-    public float health;
-    public string name;
-    public bool isalive;
-
+    public int health;
+    public int maxHealth;
+    public bool isAlive;
+    public float damage;
+    public List<MaskSystem> Inventory;
+    public int seed;
+    public int currentNode;
+    public bool shouldGenerate;
     //Holds variables that will be saved
 }

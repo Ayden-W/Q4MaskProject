@@ -9,7 +9,7 @@ public static class Serializer
         if (!Directory.Exists(directory))
             Directory.CreateDirectory(directory);
 
-        string fullPath = Path.Combine(directory, fileName);
+        string fullPath = Path.Combine(directory, filepath);
         FileMode writeMode = File.Exists(fullPath) ? FileMode.Truncate : FileMode.Create;
 
         using FileStream stream = new(fullPath, writeMode);
@@ -30,7 +30,10 @@ public static class Serializer
         string fullPath = Path.Combine(directory, fileName);
 
         if (!File.Exists(fullPath))
+        {
+            Debug.Log($"File could not be found at {fullPath}, reutnring the default as {defaultValue}");
             return defaultValue;
+        }
 
         FileMode readMode = FileMode.Open;
 
