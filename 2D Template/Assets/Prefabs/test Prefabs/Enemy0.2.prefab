@@ -100,3 +100,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ce9c27db65162b4d9530a9ce9e4bd69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBar: {fileID: 1296986017812081988, guid: 6af9a020ac416984da40363a46044b8c, type: 3}
+  playerData:
+    health: 100
+    MaxHealth: 100
+    damageBase: 0
+  enemyData:
+    _EH: 0
+    _EHM: 0
+    _EDMG: 0

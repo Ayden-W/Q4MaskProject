@@ -20,6 +20,7 @@ public class BattleHandler : MonoBehaviour
     private CharacterBattle enemyCharacterBattle;
     private CharacterBattle Attack;
     private CharacterBattle activeCharacterBattle;
+    public Healthsystem Heal;
     public string DeathScene = "Main menu";
     private State state;
 
@@ -94,38 +95,47 @@ public class BattleHandler : MonoBehaviour
         enemyHealth = enemySystem.health;
         PlayerHealth = playerSystem.health;
         Debug.Log(PlayerHealth);
+        
+    }
+    public void AttackButton()
+    {
         if (state == State.WaitingForPlayer)
         {
+
            
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
                 state = State.Busy1;
                 Increased = true;
                 playerCharacterBattle.Attack(enemyCharacterBattle, () =>
                 {
                     ChooseNextActiveCharacter();
-                   
+
 
                 });
-            }
-            if (Input.GetKeyDown(KeyCode.H)) { IronMaden.UseStacks(); }
+            
+
 
             if (state == State.Busy1 && Increased == true)
             {
                 Stack++;
-               Increased= false;
+                Increased = false;
 
                 Debug.Log("Stack Increase" + Stack);
-                
+
             }
-           
+
         }
-        
-
-
     }
-  
-       
+    public void healButton() 
+    {
+        if (state == State.WaitingForPlayer)
+        {
+            state = State.Busy1;
+            {
+                playerSystem.Heal(15);
+                ChooseNextActiveCharacter();
+            }
+        }
+    }
     
     private CharacterBattle SpawnCharacter(bool isPlayerTeam)
     {

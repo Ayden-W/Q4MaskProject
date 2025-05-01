@@ -5,27 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Ayden K's stuff/Scenes/Main menu.unity
-    guid: 3e17c906febbd2f45874b5d9d7b294b6
-  - enabled: 1
-    path: Assets/Scenes/Combat testing.unity
-    guid: 9265c907a37611542b90852b41a71987
-  - enabled: 1
-    path: Assets/Ayden K's stuff/Scenes/Game test.unity
-    guid: 2159e23a6802e0c4c9b175d4c15c184b
-  - enabled: 1
-    path: Assets/Ayden K's stuff/Scenes/Credits.unity
-    guid: d52d21556bf979b4cb746bc815089cd6
+    path: Assets/Ayden K's stuff/Scenes/Credits/AydenW.unity
+    guid: 804136d7fbd2bb14dad3b5d880d601c4
   - enabled: 1
     path: Assets/Ayden K's stuff/Scenes/AydenK.unity
     guid: f64ee940588df79469b1027fdf5d35a1
   - enabled: 1
-    path: Assets/Ayden K's stuff/Scenes/AydenW.unity
-    guid: 0f710a3fd12c1d04e9433b8d8dcd7986
+    path: Assets/Ayden K's stuff/Scenes/Credits.unity
+    guid: d52d21556bf979b4cb746bc815089cd6
   - enabled: 1
     path: Assets/Ayden K's stuff/Scenes/EthanK.unity
     guid: d979649121efe0345b53d6d35a0d5793
@@ -33,13 +21,35 @@ EditorBuildSettings:
     path: Assets/Ayden K's stuff/Scenes/James.unity
     guid: c349317073f45a542afae1b1a1d96493
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Ethan's Stuff/Scene/GridTest.unity
     guid: 9a4d20b83718e5f499483ad57feaba62
+=======
+    path: Assets/Ayden K's stuff/Scenes/Main menu.unity
+    guid: 3e17c906febbd2f45874b5d9d7b294b6
+>>>>>>> origin/Testing-branch
   - enabled: 1
     path: Assets/Ethan's Stuff/Scene/Ethan's TestPlace.unity
     guid: 84f00e8baab620743a6134a4caf27a69
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Ethan's Stuff/Scene/Shope.unity
     guid: 68904ca0a3879fd47b6e0d8e0ebe96f1
+=======
+    path: Assets/Ethan's Stuff/Scene/GridTest.unity
+    guid: 9a4d20b83718e5f499483ad57feaba62
+  - enabled: 1
+    path: Assets/Ethan's Stuff/Scene/Shope.unity
+    guid: 68904ca0a3879fd47b6e0d8e0ebe96f1
+  - enabled: 1
+    path: Assets/Scenes/Battle.unity
+    guid: 8320cfbd138ec3448afc83cf3645076f
+  - enabled: 1
+    path: Assets/Scenes/Boss Battle.unity
+    guid: 7ebc12cd1a02dbf49bcdbc032fe06750
+  - enabled: 1
+    path: Assets/Scenes/Combat testing.unity
+    guid: 9265c907a37611542b90852b41a71987
+>>>>>>> origin/Testing-branch
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

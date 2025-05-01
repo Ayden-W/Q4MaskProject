@@ -36,17 +36,19 @@ public class Healthsystem
         { 
             health = 0;
 
-            //playerHealth
-            if (battleHandler.enemyHealth == 0)
-            {
-                SceneManager.LoadScene("Main menu");
-            } 
-
-            //Actulay enemy health
-            if (battleHandler.PlayerHealth <= 0)
+            if (battleHandler.enemyHealth <= 0)
             {
                 //win
+                SceneManager.LoadScene("GridTest");
             }
+
+
+            if (battleHandler.PlayerHealth <= 0)
+            {
+
+                SceneManager.LoadScene("MainMenu");
+            }
+
         }
 
 
@@ -66,6 +68,6 @@ public class Healthsystem
         if (OnHealthChanged != null) OnHealthChanged(this, EventArgs.Empty);
     }
    
-
+ 
     
 }

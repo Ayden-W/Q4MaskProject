@@ -108,12 +108,7 @@ public class CharacterBattle : MonoBehaviour
 
     }
 
-    public void RangedAttack(CharacterBattle targetCharacterBattle, Action onAttackComplete)
-    {
-        state = State.Busy2;
-        Debug.Log("Ranged Attack");
-       
-    }
+   
     private void SlideToPosition(Vector3 position, Action OnSlideComplete)
     {
         this.slideTargetPosition = position;
