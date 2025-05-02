@@ -10,6 +10,8 @@ public class CharacterBattle : MonoBehaviour
     private State state;
     private Vector3 slideTargetPosition;
     private Action OnSlideComplete;
+    public bool Isattacking;
+    public Animation Animation;
     private enum State
     {
         Idle,
