@@ -17,6 +17,6 @@ public class Shop : NodeList
 
     public override void OnClick()
     {
-        SceneManager.LoadScene("Shop");
+        SceneManager.LoadScene("Shope");
     }
 }
