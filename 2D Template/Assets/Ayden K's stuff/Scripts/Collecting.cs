@@ -14,7 +14,7 @@ public class Collecting : MonoBehaviour
    public void AddToList()
     {
         randomInt = Random.Range(0, listOfMasks.Count);
-        Playerscript.Inventory.Add(listOfMasks[randomInt]);
+        SaveDataController.Instance.Current.Inventory.Add(listOfMasks[randomInt]);
         //Playerscript.UpdateMasks();
 
         listOfMasks[randomInt].OnEquip(Playerscript);
@@ -22,13 +22,13 @@ public class Collecting : MonoBehaviour
 
     public void Add(MaskSystem mask)
     {
-        Playerscript.Inventory.Add(mask);
+        SaveDataController.Instance.Current.Inventory.Add(mask);
         mask.OnEquip(Playerscript);
     }
 
     public void Remove(MaskSystem mask)
     {
-        Playerscript.Inventory.Remove(mask);
+        SaveDataController.Instance.Current.Inventory.Remove(mask);
         mask.OnUnequip(Playerscript);
     }
 

@@ -13,9 +13,9 @@ public abstract class NodeList : MonoBehaviour
     [SerializeField] public bool inRange; /*=> */
     [SerializeField] public string sceneName;
 
-    public static NodeList current;
+    [HideInInspector]public SpriteRenderer spriteRenderer;
 
-    protected SpriteRenderer spriteRenderer;
+    public static List<NodeList> list = new();
 
     public NodeList Next;
 
@@ -39,7 +39,7 @@ public abstract class NodeList : MonoBehaviour
     }
     public void OnMouseDown()
     {
-        if(current.Next != this)
+        if(list[SaveDataController.Instance.Current.currentNode].Next != this)
         {
             return;
         }
@@ -51,9 +51,9 @@ public abstract class NodeList : MonoBehaviour
 
         OnClick();
 
-        current.spriteRenderer.color = Color.white;
+        list[SaveDataController.Instance.Current.currentNode].spriteRenderer.color = Color.white;
 
-        current = this;
+        SaveDataController.Instance.Current.currentNode = list.IndexOf(this);
 
         spriteRenderer.color = Color.yellow;
 

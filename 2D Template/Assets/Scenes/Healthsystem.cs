@@ -14,7 +14,7 @@ public class Healthsystem
 
     
     
-    public Healthsystem(int Maxhealth) 
+    public Healthsystem(int currentHealth, int Maxhealth) 
     {
         this.MaxHealth = Maxhealth;
         health = Maxhealth;

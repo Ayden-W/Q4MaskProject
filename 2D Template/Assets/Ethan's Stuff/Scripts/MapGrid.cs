@@ -1,3 +1,4 @@
+using NUnit.Framework.Interfaces;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -22,12 +23,22 @@ public class MapGrid : MonoBehaviour
     private void Awake()
     {
         sensor = GetComponent<Sensor>();
+        if (SaveDataController.Instance.Current.shouldGenerate)
+        {
+            SaveDataController.Instance.Current.seed = Random.Range(0,int.MaxValue);
+            SaveDataController.Instance.Current.shouldGenerate = false;
 
+            SaveDataController.Instance.Current.currentNode = 0;
+        }
+        System.Random random = new(SaveDataController.Instance.Current.seed);
+
+
+        NodeList.list.Clear();
         for (int i = 0; i < 10; i++)
         {
             
-            randomInt = Random.Range(min, max);
-            randomInt2 = Random.Range(min, max);// Minimum and Maximum of Y 
+            randomInt = Mathf.Lerp(min, max,(float) random.NextDouble());
+            randomInt2 = Mathf.Lerp(min, max, (float)random.NextDouble()); ;// Minimum and Maximum of Y 
             randomPosition = new Vector2(randomPosition.x + xSpacing, randomInt);
             randomPosition2 = new Vector2(randomPosition2.x + xSpacing, randomInt2);
 
@@ -40,13 +51,16 @@ public class MapGrid : MonoBehaviour
             NodeList nodeList;
             NodeList nodeList2;
 
-            int r = Random.Range(0, 10);
+            int r = random.Next(0, 10);
             if (i == 9)
             {
                 nodeList = nodeListGo.AddComponent<Fight>();
                 nodeList.GetComponent<SpriteRenderer>().sprite = Icons[0];
                 nodeList2 = Nodelist2Go.AddComponent<BossFight>();
                 nodeList2.GetComponent<SpriteRenderer>().sprite = Icons[3];
+
+                NodeList.list.Add(nodeList);
+                NodeList.list.Add(nodeList2);
             }
             else if (r == 0)
             {
@@ -54,6 +68,9 @@ public class MapGrid : MonoBehaviour
                 nodeList.GetComponent<SpriteRenderer>().sprite = Icons[2];
                 nodeList2= Nodelist2Go.AddComponent<Heal>();
                 nodeList2.GetComponent<SpriteRenderer>().sprite = Icons[2];
+
+                NodeList.list.Add(nodeList);
+                NodeList.list.Add(nodeList2);
             }
             else if (r  == 1)
             {
@@ -61,6 +78,9 @@ public class MapGrid : MonoBehaviour
                 nodeList.GetComponent<SpriteRenderer>().sprite = Icons[1];
                 nodeList2 = Nodelist2Go.AddComponent<Shop>();
                 nodeList2.GetComponent<SpriteRenderer>().sprite = Icons[1];
+
+                NodeList.list.Add(nodeList);
+                NodeList.list.Add(nodeList2);
             }
             else if (r == 2)
             {
@@ -68,6 +88,9 @@ public class MapGrid : MonoBehaviour
                 nodeList.GetComponent<SpriteRenderer>().sprite = Icons[0];
                 nodeList2 = Nodelist2Go.AddComponent<Fight>();
                 nodeList2.GetComponent<SpriteRenderer>().sprite = Icons[0];
+
+                NodeList.list.Add(nodeList);
+                NodeList.list.Add(nodeList2);
             }
             else if (r == 3)
             {
@@ -75,6 +98,9 @@ public class MapGrid : MonoBehaviour
                 nodeList.GetComponent<SpriteRenderer>().sprite = Icons[0];
                 nodeList2 = Nodelist2Go.AddComponent<Fight>();
                 nodeList2.GetComponent<SpriteRenderer>().sprite = Icons[0];
+
+                NodeList.list.Add(nodeList);
+                NodeList.list.Add(nodeList2);
             }
             else if (r == 4)
             {
@@ -82,6 +108,9 @@ public class MapGrid : MonoBehaviour
                 nodeList.GetComponent<SpriteRenderer>().sprite = Icons[0];
                 nodeList2 = Nodelist2Go.AddComponent<Fight>();
                 nodeList2.GetComponent<SpriteRenderer>().sprite = Icons[0];
+
+                NodeList.list.Add(nodeList);
+                NodeList.list.Add(nodeList2);
             }
             else if (r == 5)
             {
@@ -89,6 +118,9 @@ public class MapGrid : MonoBehaviour
                 nodeList.GetComponent<SpriteRenderer>().sprite = Icons[0];
                 nodeList2 = Nodelist2Go.AddComponent<Fight>();
                 nodeList2.GetComponent<SpriteRenderer>().sprite = Icons[0];
+
+                NodeList.list.Add(nodeList);
+                NodeList.list.Add(nodeList2);
             }
             else if (r == 6)
             {
@@ -96,6 +128,9 @@ public class MapGrid : MonoBehaviour
                 nodeList.GetComponent<SpriteRenderer>().sprite = Icons[0];
                 nodeList2 = Nodelist2Go.AddComponent<Fight>();
                 nodeList2.GetComponent<SpriteRenderer>().sprite = Icons[0];
+
+                NodeList.list.Add(nodeList);
+                NodeList.list.Add(nodeList2);
             }
             else if (r == 7)
             {
@@ -103,6 +138,9 @@ public class MapGrid : MonoBehaviour
                 nodeList.GetComponent<SpriteRenderer>().sprite = Icons[2];
                 nodeList2 = Nodelist2Go.AddComponent<Heal>();
                 nodeList2.GetComponent<SpriteRenderer>().sprite = Icons[2];
+
+                NodeList.list.Add(nodeList);
+                NodeList.list.Add(nodeList2);
             }   
             else if (r ==8)
             {
@@ -110,6 +148,9 @@ public class MapGrid : MonoBehaviour
                 nodeList.GetComponent<SpriteRenderer>().sprite = Icons[2];
                 nodeList2 = Nodelist2Go.AddComponent<Heal>();
                 nodeList2.GetComponent<SpriteRenderer>().sprite = Icons[2];
+
+                NodeList.list.Add(nodeList);
+                NodeList.list.Add(nodeList2);
             }
             else
             {
@@ -117,6 +158,9 @@ public class MapGrid : MonoBehaviour
                 nodeList.GetComponent<SpriteRenderer>().sprite = Icons[1];
                 nodeList2 = Nodelist2Go.AddComponent<Shop>();
                 nodeList2.GetComponent<SpriteRenderer>().sprite = Icons[1];
+
+                NodeList.list.Add(nodeList);
+                NodeList.list.Add(nodeList2);
             }
 
             /*LineRenderer lr = FindFirstObjectByType<LineRenderer>();*/ // Grabs the LineRenderer
@@ -131,13 +175,14 @@ public class MapGrid : MonoBehaviour
         }
 
         node.AddComponent<EmptyNode>();
+        NodeList.list.Insert(0,node.GetComponent<EmptyNode>());
 
         for (int i = 0; i< nodeGroup.transform.childCount - 1; i++)
         {
             nodeGroup.transform.GetChild(i).GetComponent<NodeList>().Next = nodeGroup.transform.GetChild(i + 1).GetComponent<NodeList>();
         }
 
-
+        NodeList.list[SaveDataController.Instance.Current.currentNode].spriteRenderer.color = Color.yellow;
     }
 
 

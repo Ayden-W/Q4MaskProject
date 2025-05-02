@@ -23,7 +23,7 @@ public class IronMaden : MonoBehaviour
         if (BloodStacks>7)
         {
             BloodStacks = 7;
-            healthSystem.Damage(10);
+            healthSystem.Damage((int)SaveDataController.Instance.Current.damage);
             
         }
     }

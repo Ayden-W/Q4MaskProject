@@ -10,8 +10,6 @@ public class CharacterBattle : MonoBehaviour
     private State state;
     private Vector3 slideTargetPosition;
     private Action OnSlideComplete;
-
-    private int baseDamage = 10;
     private enum State
     {
         Idle,
@@ -88,7 +86,7 @@ public class CharacterBattle : MonoBehaviour
             //CharacterBase.PlayAnimAttack(attackDir, null, () => {
             //characterBase.PlayAnimIdle(attackDir);
             Debug.Log("Attack");
-            healthSystem.Damage(baseDamage);
+            healthSystem.Damage((int)SaveDataController.Instance.Current.damage);
           
 
 

@@ -23,7 +23,7 @@ public class Passivemask : MaskSystem
         {
             player.Defence *= yes.Defence;
             player.Damage *= yes.DMG;
-            Healthsystem.Damage((int)(10f * yes.DMG));
+            Healthsystem.Damage((int)(SaveDataController.Instance.Current.damage * yes.DMG));
             Debug.Log(player.Damage);
             Debug.Log(player.Defence);
       
@@ -45,6 +45,6 @@ public class Passivemask : MaskSystem
         // lower the player's stats
         player.Defence /= yes.Defence;
         player.Damage /= yes.DMG;
-        Healthsystem.Damage((int)(10f / yes.DMG));
+        Healthsystem.Damage((int)(SaveDataController.Instance.Current.damage / yes.DMG));
     }
 }
