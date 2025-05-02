@@ -9,7 +9,7 @@ public abstract class NodeList : MonoBehaviour
 {
     [SerializeField] public GameObject node;
     [SerializeField] public Sprite Icon;
-    [SerializeField] public List typings;
+    [SerializeField] public List<GameObject> typings;
     [SerializeField] public bool inRange; /*=> */
     [SerializeField] public string sceneName;
 
