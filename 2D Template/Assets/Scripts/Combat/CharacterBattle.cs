@@ -31,8 +31,7 @@ public class CharacterBattle : MonoBehaviour
 
             // set Anim and Texture
 
-            //characterBase.
-            //characterBase.GetMaterial().mainTexture=
+            
         }
         else
         {
@@ -85,8 +84,8 @@ public class CharacterBattle : MonoBehaviour
             //Arrived and Attack target
             state = State.Busy2;
             Vector3 attackDir = (targetCharacterBattle.GetPosition() - GetPosition()).normalized;
-            //CharacterBase.PlayAnimAttack(attackDir, null, () => {
-            //characterBase.PlayAnimIdle(attackDir);
+            //Animation here
+
             Debug.Log("Attack");
             healthSystem.Damage((int)SaveDataController.Instance.Current.damage);
           
