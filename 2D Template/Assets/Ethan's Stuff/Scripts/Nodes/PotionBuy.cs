@@ -1,16 +1,21 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PotionBuy : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private bool soldOut = false;
+    
+    public void OnClick()
     {
-        
+        if (soldOut == false)
+        {
+            SaveDataController.Instance.Current.potions += 2;
+            soldOut = true;
+        }
+        if (soldOut == true)
+        {
+            Debug.Log("They stare at you as if you are what they call a pot pig.");
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

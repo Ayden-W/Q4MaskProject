@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Heal : NodeList
 {
@@ -19,14 +20,15 @@ public class Heal : NodeList
     public override void OnClick()
     {
         //healthsystem?.Heal(10);
-        SaveDataController.Instance.Current.health += 10;
+        SaveDataController.Instance.Current.health += 5;
 
         if(SaveDataController.Instance.Current.health > SaveDataController.Instance.Current.maxHealth)
         {
             SaveDataController.Instance.Current.health = SaveDataController.Instance.Current.maxHealth;
         }
+        SceneManager.LoadScene("Shrine");
 
-        Debug.Log("Wow You healed at full hp, nice");
+        Debug.Log("You found a shrine");
 
     }
 }
