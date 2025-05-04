@@ -17,7 +17,7 @@ public class Healthsystem
     public Healthsystem(int currentHealth, int Maxhealth) 
     {
         this.MaxHealth = Maxhealth;
-        health = Maxhealth;
+        health = currentHealth;
     }   
     public int GetHealth()
     {
@@ -43,7 +43,7 @@ public class Healthsystem
             }
 
 
-            if (battleHandler.PlayerHealth <= 0)
+            if (!SaveDataController.Instance.Current.isAlive)
             {
 
                 SceneManager.LoadScene("MainMenu");
@@ -63,11 +63,18 @@ public class Healthsystem
     }
     public void Heal(int healAmount)
     {
-        health += healAmount;
-        if (health > MaxHealth) health = MaxHealth;
-        if (OnHealthChanged != null) OnHealthChanged(this, EventArgs.Empty);
+        if (SaveDataController.Instance.Current.potions > 0)
+        {
+         health += healAmount;
+            SaveDataController.Instance.Current.potions--;
+         if (health > MaxHealth) health = MaxHealth;
+         if (OnHealthChanged != null) OnHealthChanged(this, EventArgs.Empty);
+        }
     }
    
- 
+    public void SetupHealthBar()
+    {
+        OnHealthChanged(this, EventArgs.Empty);
+    }
     
 }

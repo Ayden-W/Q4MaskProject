@@ -20,7 +20,7 @@ public class EndDaGame : MonoBehaviour
         }
 
 
-        if (battleHandler.PlayerHealth <= 0)
+        if (!SaveDataController.Instance.Current.isAlive)
         {
 
             SceneManager.LoadScene("MainMenu");
