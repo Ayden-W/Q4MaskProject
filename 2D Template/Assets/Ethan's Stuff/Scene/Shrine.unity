@@ -500,10 +500,10 @@ MonoBehaviour:
   topPivot: {fileID: 1908545263}
   bottomPivot: {fileID: 59835827}
   Fish: {fileID: 84172892}
-  hookPower: 0.5
+  hookPower: 0.25
   hookPullPower: 0.01
   hookGravityPower: 0.005
-  hookProgressDegredationPower: 0.1
+  hookProgressDegredationPower: 0.15
   timerMultiplicator: 8
   smoothMotion: 2
   hook: {fileID: 1636325369}
