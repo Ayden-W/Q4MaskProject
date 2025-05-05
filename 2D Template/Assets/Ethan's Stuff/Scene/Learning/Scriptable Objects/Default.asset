@@ -22,3 +22,4 @@ MonoBehaviour:
     seed: 0
     currentNode: 0
     shouldGenerate: 1
+    potions: 3

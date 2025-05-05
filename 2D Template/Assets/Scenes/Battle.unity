@@ -255,6 +255,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122370587}
   m_CullTransparentMesh: 1
+--- !u!1001 &654305978
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1175135822736802393, guid: eb1c588006918354982499288571f6b9, type: 3}
+      propertyPath: m_Name
+      value: SaveDataController
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933289606507033673, guid: eb1c588006918354982499288571f6b9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.1049953
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933289606507033673, guid: eb1c588006918354982499288571f6b9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.2816149
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933289606507033673, guid: eb1c588006918354982499288571f6b9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 966.72784
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933289606507033673, guid: eb1c588006918354982499288571f6b9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933289606507033673, guid: eb1c588006918354982499288571f6b9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933289606507033673, guid: eb1c588006918354982499288571f6b9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933289606507033673, guid: eb1c588006918354982499288571f6b9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933289606507033673, guid: eb1c588006918354982499288571f6b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933289606507033673, guid: eb1c588006918354982499288571f6b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933289606507033673, guid: eb1c588006918354982499288571f6b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eb1c588006918354982499288571f6b9, type: 3}
 --- !u!1 &736619931
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,7 +365,6 @@ MonoBehaviour:
   IsBoss: 0
   Stack: 0
   Increased: 0
-  PlayerHealth: 0
   enemyHealth: 100
   DeathScene: Main menu
   PFHealthBar: {fileID: 3198604661988604405, guid: 6af9a020ac416984da40363a46044b8c, type: 3}
@@ -1041,3 +1097,4 @@ SceneRoots:
   - {fileID: 736619932}
   - {fileID: 850638005}
   - {fileID: 1207713007}
+  - {fileID: 654305978}

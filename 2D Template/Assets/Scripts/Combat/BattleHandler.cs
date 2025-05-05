@@ -14,7 +14,6 @@ public class BattleHandler : MonoBehaviour
     public bool IsBoss;
     public int Stack = 0;
     public bool Increased;
-    public int PlayerHealth;
     public int enemyHealth = 100;
     private CharacterBattle playerCharacterBattle;
     private CharacterBattle enemyCharacterBattle;
@@ -61,18 +60,17 @@ public class BattleHandler : MonoBehaviour
         Transform HealthBartransform = Instantiate(PFHealthBar, new Vector3(0, 6), Quaternion.identity);
         HealthBar healthBar = HealthBartransform.GetComponent<HealthBar>();
         healthBar.Setup(enemySystem);
-
+        enemySystem.SetupHealthBar();
         
        
         playerCharacterBattle.Setup(true, enemySystem);
            
         //Player
         playerSystem = new Healthsystem(SaveDataController.Instance.Current.health, SaveDataController.Instance.Current.maxHealth);
-        PlayerHealth = playerSystem.health;
         Transform HealthBartransform2 = Instantiate(PFHealthBar, new Vector3(0, -5), Quaternion.identity);
         HealthBar healthBar2 = HealthBartransform2.GetComponent<HealthBar>();
         healthBar2.Setup(playerSystem);
-      
+        playerSystem.SetupHealthBar();
 
        
         
@@ -93,10 +91,8 @@ public class BattleHandler : MonoBehaviour
     private void Update()
     {
         enemyHealth = enemySystem.health;
-        PlayerHealth = playerSystem.health;
-        SaveDataController.Instance.Current.health = PlayerHealth;
-        SaveDataController.Instance.Current.isAlive = PlayerHealth > 0;
-        Debug.Log(PlayerHealth);
+        SaveDataController.Instance.Current.health = playerSystem.health;
+        SaveDataController.Instance.Current.isAlive = SaveDataController.Instance.Current.health > 0;
         
     }
     public void AttackButton()
@@ -133,7 +129,7 @@ public class BattleHandler : MonoBehaviour
         {
             state = State.Busy1;
             {
-                playerSystem.Heal(15);
+                playerSystem.Heal(30);
                 ChooseNextActiveCharacter();
             }
         }
