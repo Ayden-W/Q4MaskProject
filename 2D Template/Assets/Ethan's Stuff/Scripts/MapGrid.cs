@@ -16,13 +16,11 @@ public class MapGrid : MonoBehaviour
     public float max;
     public float xSpacing;
     private bool inRange;
-    Sensor sensor;
     DetectNode detectNode;
     public GameObject nodeGroup;
     public Sprite[] Icons;
     private void Awake()
     {
-        sensor = GetComponent<Sensor>();
         if (SaveDataController.Instance.Current.shouldGenerate)
         {
             SaveDataController.Instance.Current.seed = Random.Range(0,int.MaxValue);
