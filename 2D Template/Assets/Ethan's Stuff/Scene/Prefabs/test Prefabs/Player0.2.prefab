@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1296986017812081988, guid: 6af9a020ac416984da40363a46044b8c, type: 3}
   Isattacking: 0
-  Animation: {fileID: 0}
+  Anim: {fileID: 4839707139159477012}
 --- !u!95 &4839707139159477012
 Animator:
   serializedVersion: 7

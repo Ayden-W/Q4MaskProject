@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Ayden K's stuff/Scenes/Credits/AydenW.unity
+    path: Assets/Ayden K's stuff/Scenes/AydenW.unity
     guid: 804136d7fbd2bb14dad3b5d880d601c4
   - enabled: 1
     path: Assets/Ayden K's stuff/Scenes/AydenK.unity

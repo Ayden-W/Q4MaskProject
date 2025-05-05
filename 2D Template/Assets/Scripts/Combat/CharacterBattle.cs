@@ -11,7 +11,7 @@ public class CharacterBattle : MonoBehaviour
     private Vector3 slideTargetPosition;
     private Action OnSlideComplete;
     public bool Isattacking;
-    public Animation Animation;
+    public Animator Anim;
     private enum State
     {
         Idle,
@@ -45,6 +45,10 @@ public class CharacterBattle : MonoBehaviour
     private void Update()
     {
 
+        if (Anim)
+        {
+            Anim.SetBool("IsAttacking", Isattacking);
+        }
         Debug.Log(state);
         switch (state)
         {
@@ -75,6 +79,7 @@ public class CharacterBattle : MonoBehaviour
     //Melee attack
     public void Attack(CharacterBattle targetCharacterBattle, Action onAttackComplete)
     {
+        Isattacking = true;
         GetPosition();
         Vector3 startingPosition = GetPosition();
         slideTargetPosition = targetCharacterBattle.GetPosition() + (GetPosition() - targetCharacterBattle.GetPosition()).normalized / 3f;
@@ -84,22 +89,25 @@ public class CharacterBattle : MonoBehaviour
             //Arrived and Attack target
             state = State.Busy2;
             Vector3 attackDir = (targetCharacterBattle.GetPosition() - GetPosition()).normalized;
+           
             //Animation here
 
             Debug.Log("Attack");
             healthSystem.Damage((int)SaveDataController.Instance.Current.damage);
-          
+            Isattacking = false;
 
 
 
             //attack completed, Slide back
             SlideToPosition(startingPosition, () =>
             {
+                
                 //slide back completed
 
                 state = State.Idle;
                 this.slideTargetPosition = targetCharacterBattle.GetPosition();
                 onAttackComplete();
+               
                 return;
             });
             //});
