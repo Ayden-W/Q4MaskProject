@@ -6,14 +6,17 @@ using UnityEngine.SceneManagement;
 public class Start_game : MonoBehaviour
 {
     public string LevelName;
+    public Animator transition;
 
     public void LoadLevel()
     {
         StartCoroutine(MyCoroutine());
+
     }
     IEnumerator MyCoroutine()
     {
-        yield return new WaitForSeconds(0.4f);
+        transition.SetBool("Switch", true);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(LevelName);
     }
     public void LoadLevelAdditive()
@@ -22,7 +25,8 @@ public class Start_game : MonoBehaviour
     }
     IEnumerator MyCoroutine2()
     {
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(LevelName, LoadSceneMode.Additive);
+
     }
 }
