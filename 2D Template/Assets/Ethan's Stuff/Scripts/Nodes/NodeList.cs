@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public abstract class NodeList : MonoBehaviour
 {
-    public AudioClip Click;
+   
     [SerializeField] public GameObject node;
     [SerializeField] public Sprite Icon;
     [SerializeField] public List<GameObject> typings;
@@ -46,7 +47,7 @@ public abstract class NodeList : MonoBehaviour
         }
 
         Debug.Log("Bonk");
-        AudioSource.PlayClipAtPoint(Click, transform.position);
+        GetComponent<AudioSource>().Play();
         OnClick();
 
         list[SaveDataController.Instance.Current.currentNode].spriteRenderer.color = Color.white;
