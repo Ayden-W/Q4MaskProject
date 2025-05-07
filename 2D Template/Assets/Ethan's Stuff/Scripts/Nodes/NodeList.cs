@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public abstract class NodeList : MonoBehaviour
 {
+    public AudioClip Click;
     [SerializeField] public GameObject node;
     [SerializeField] public Sprite Icon;
     [SerializeField] public List<GameObject> typings;
@@ -45,7 +46,7 @@ public abstract class NodeList : MonoBehaviour
         }
 
         Debug.Log("Bonk");
-
+        AudioSource.PlayClipAtPoint(Click, transform.position);
         OnClick();
 
         list[SaveDataController.Instance.Current.currentNode].spriteRenderer.color = Color.white;
