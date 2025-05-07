@@ -8,7 +8,7 @@ public class MapGrid : MonoBehaviour
     public GameObject node;
     private float randomInt;
     private float randomInt2;
-    private GameObject CurrentNode;
+    private GameObject currentNode;
     private Vector3 randomPosition;
     private Vector3 randomPosition2;
     private float originalX;
@@ -19,17 +19,17 @@ public class MapGrid : MonoBehaviour
     DetectNode detectNode;
     public GameObject nodeGroup;
     public Sprite[] Icons;
-    private void Awake()
+    private void Start()
     {
         if (SaveDataController.Instance.Current.shouldGenerate)
         {
-            SaveDataController.Instance.Current.seed = Random.Range(0,int.MaxValue);
             SaveDataController.Instance.Current.shouldGenerate = false;
+            SaveDataController.Instance.Current.seed = Random.Range(0,int.MaxValue);
 
             SaveDataController.Instance.Current.currentNode = 0;
         }
-        System.Random random = new(SaveDataController.Instance.Current.seed);
 
+        System.Random random = new(SaveDataController.Instance.Current.seed);
 
         NodeList.list.Clear();
         for (int i = 0; i < 10; i++)

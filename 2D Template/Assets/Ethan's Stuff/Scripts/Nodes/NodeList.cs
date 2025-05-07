@@ -39,13 +39,10 @@ public abstract class NodeList : MonoBehaviour
     }
     public void OnMouseDown()
     {
-        if(list[SaveDataController.Instance.Current.currentNode].Next != this)
+        if (list[SaveDataController.Instance.Current.currentNode].Next != this)
         {
             return;
         }
-
-
-
 
         Debug.Log("Bonk");
 

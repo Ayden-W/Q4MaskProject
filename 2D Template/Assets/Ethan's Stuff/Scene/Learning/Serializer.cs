@@ -31,7 +31,7 @@ public static class Serializer
 
         if (!File.Exists(fullPath))
         {
-            Debug.Log($"File could not be found at {fullPath}, reutnring the default as {defaultValue}");
+            Debug.Log($"File could not be found at {fullPath}, returning the default as {defaultValue}");
             return defaultValue;
         }
 
@@ -42,7 +42,7 @@ public static class Serializer
         string json = reader.ReadToEnd();
         T value = JsonUtility.FromJson<T>(json);
 
-        Debug.Log($"Object wsa ssuccessfully loaded from {fullPath} as {value}");
+        Debug.Log($"Object wsa successfully loaded from {fullPath} as {value}");
         return value;
     }
 }

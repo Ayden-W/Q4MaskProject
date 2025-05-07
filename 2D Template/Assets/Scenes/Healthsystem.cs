@@ -46,7 +46,12 @@ public class Healthsystem
             if (!SaveDataController.Instance.Current.isAlive)
             {
 
+<<<<<<< HEAD
                 SceneManager.LoadScene("LoseScene");
+=======
+                SceneManager.LoadScene("Main menu");
+                
+>>>>>>> cacc1dcfa6e66798687b0a7e8671867835af56cb
             }
 
         }
