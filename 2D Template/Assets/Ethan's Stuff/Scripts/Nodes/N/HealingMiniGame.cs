@@ -5,7 +5,8 @@ public class HealingMiniGame : MonoBehaviour
 {
     [SerializeField] Transform topPivot;
     [SerializeField] Transform bottomPivot;
-
+    public AudioClip Winner;
+    public AudioClip Lost;
     [SerializeField] Transform Fish;
 
     float fishPosition;
@@ -78,12 +79,14 @@ public class HealingMiniGame : MonoBehaviour
             failTimer -= Time.deltaTime;
             if (failTimer < 0)
             {
+                GetComponent<AudioSource>().clip = Lost;
                 Lose();
             }
         }
 
         if(hookProgress >= 1f)
         {
+            GetComponent<AudioSource>().clip = Winner;
             Win();
         }
 
@@ -127,6 +130,7 @@ public class HealingMiniGame : MonoBehaviour
     private void Win()
     {
         pause = true;
+        GetComponent<AudioSource>().Play();
         Debug.Log("Healed");
         SaveDataController.Instance.Current.health += 40;
         SceneManager.LoadScene("GridTest");
@@ -134,6 +138,7 @@ public class HealingMiniGame : MonoBehaviour
     }
     private void Lose()
     {
+        GetComponent<AudioSource>().Play();
         pause = true;
         Debug.Log("You wait... and wait... and yet ... nothing came");
         Debug.Log("You leave as you, not any different than before you arrived");
