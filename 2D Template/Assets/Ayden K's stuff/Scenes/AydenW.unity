@@ -123,7 +123,7 @@ NavMeshSettings:
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-<<<<<<< HEAD:2D Template/Assets/Ayden K's stuff/Scenes/AydenW.unity
+
   m_Modification:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
@@ -186,16 +186,7 @@ PrefabInstance:
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ae6bfef14e480d40bbf63b661e7419d, type: 3}
 --- !u!1 &25671634
-=======
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.171383, y: 94.83885, z: 0}
-  m_LocalScale: {x: 21.41907, y: 14.513454, z: 25.912254}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 809278702}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &367125475
->>>>>>> cd0fdd00d9a5bdab1ded9f9990d4d068a8079eaa:2D Template/Assets/Ayden K's stuff/Scenes/Credits/AydenW.unity
+
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -329,9 +320,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 25671634}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD:2D Template/Assets/Ayden K's stuff/Scenes/AydenW.unity
---- !u!114 &25671639
-=======
+
 --- !u!1 &509943268
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,11 +610,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD:2D Template/Assets/Ayden K's stuff/Scenes/AydenW.unity
-  - component: {fileID: 88891781}
-  - component: {fileID: 88891783}
-  - component: {fileID: 88891782}
-=======
+
   - component: {fileID: 650646097}
   - component: {fileID: 650646096}
   m_Layer: 0
@@ -1984,7 +1969,7 @@ CanvasRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-<<<<<<< HEAD:2D Template/Assets/Ayden K's stuff/Scenes/AydenW.unity
+
   - {fileID: 1091114027}
   - {fileID: 16824822}
   - {fileID: 858913393}
@@ -1994,9 +1979,3 @@ SceneRoots:
   - {fileID: 1129669786}
   - {fileID: 1441971562}
   - {fileID: 1150842337}
-=======
-  - {fileID: 614181117}
-  - {fileID: 809278702}
-  - {fileID: 1097119715}
-  - {fileID: 1753533016}
->>>>>>> cd0fdd00d9a5bdab1ded9f9990d4d068a8079eaa:2D Template/Assets/Ayden K's stuff/Scenes/Credits/AydenW.unity
