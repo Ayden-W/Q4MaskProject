@@ -925,6 +925,18 @@ PrefabInstance:
       propertyPath: node
       value: 
       objectReference: {fileID: 1273458657}
+    - target: {fileID: 5833599496477263656, guid: 8d1802d73be222d4aac7de5de0c12bc0, type: 3}
+      propertyPath: m_Radius
+      value: 0.21964973
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833599496477263656, guid: 8d1802d73be222d4aac7de5de0c12bc0, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.003443113
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833599496477263656, guid: 8d1802d73be222d4aac7de5de0c12bc0, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.027023558
+      objectReference: {fileID: 0}
     - target: {fileID: 6949378120013793462, guid: 8d1802d73be222d4aac7de5de0c12bc0, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.2054553
