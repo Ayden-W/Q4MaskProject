@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b638e6d0251ddaf4f90c3664007b3717, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Click: {fileID: 8300000, guid: b5d95761ed2c2c04285335c66098f1d6, type: 3}
   node: {fileID: 1273458657}
   min: -4.5
   max: 4.5
@@ -925,6 +926,18 @@ PrefabInstance:
       propertyPath: node
       value: 
       objectReference: {fileID: 1273458657}
+    - target: {fileID: 5833599496477263656, guid: 8d1802d73be222d4aac7de5de0c12bc0, type: 3}
+      propertyPath: m_Radius
+      value: 0.21964973
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833599496477263656, guid: 8d1802d73be222d4aac7de5de0c12bc0, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.003443113
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833599496477263656, guid: 8d1802d73be222d4aac7de5de0c12bc0, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.027023558
+      objectReference: {fileID: 0}
     - target: {fileID: 6949378120013793462, guid: 8d1802d73be222d4aac7de5de0c12bc0, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.2054553

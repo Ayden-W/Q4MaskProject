@@ -1,2 +1,16 @@
 fileFormatVersion: 2
 guid: f64a45c511a24a94b8eb8bc2710573f4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Click: {fileID: 8300000, guid: b5d95761ed2c2c04285335c66098f1d6, type: 3}
+  - node: {instanceID: 0}
+  - Icon: {instanceID: 0}
+  - spriteRenderer: {instanceID: 0}
+  - Next: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
