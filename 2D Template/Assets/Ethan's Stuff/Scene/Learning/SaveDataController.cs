@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class SaveDataController : MonoBehaviour
@@ -28,5 +29,10 @@ public class SaveDataController : MonoBehaviour
     public void Load()
     {
         _currentData = Serializer.Load($"{Application.persistentDataPath}/SaveData", fileName, defaultData.value);
+    }
+    public void DeleteData()
+    {
+       Serializer.Delete(fileName, $"{Application.persistentDataPath}/SaveData");
+        Instance._currentData = defaultData.value;
     }
 }
