@@ -236,7 +236,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1750211592945624349, guid: e2b45b675fb555f448e01de8bcab5315, type: 3}
+  m_Sprite: {fileID: 8454014769128353601, guid: 23d4eb6c7d3750647844ebcc669d0fcf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -267,7 +267,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelName: GridTest
-  Switch: 0
   transition: {fileID: 1111399285}
 --- !u!95 &123521227
 Animator:
@@ -529,7 +528,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelName: Ethan's TestPlace
-  Switch: 0
   transition: {fileID: 1111399285}
 --- !u!114 &377522239
 MonoBehaviour:
@@ -735,7 +733,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelName: Credits
-  Switch: 0
   transition: {fileID: 1111399285}
 --- !u!114 &580740817
 MonoBehaviour:
