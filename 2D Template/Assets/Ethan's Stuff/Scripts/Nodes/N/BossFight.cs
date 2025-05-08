@@ -17,6 +17,6 @@ public class BossFight : NodeList
 
     public override void OnClick()
     {
-        SceneManager.LoadScene("BossEncounter");
+        SceneManager.LoadScene("BossBattle");
     }
 }

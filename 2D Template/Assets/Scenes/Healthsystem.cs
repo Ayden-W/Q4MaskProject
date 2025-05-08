@@ -2,6 +2,7 @@
 using System;
 using System.Diagnostics;
 using Unity.VisualScripting;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Healthsystem 
 {
@@ -9,8 +10,9 @@ public class Healthsystem
     public event EventHandler OnHealthChanged;
     public int health;
     private int MaxHealth;
-   
 
+    public AudioClip deathclip;
+    public AudioClip Playerdeath;
 
     
     
@@ -35,6 +37,7 @@ public class Healthsystem
         if (health <= 0) 
         { 
             health = 0;
+            
 
             if (battleHandler.enemyHealth <= 0)
             {
