@@ -45,7 +45,7 @@ public class Healthsystem
 
             if (!SaveDataController.Instance.Current.isAlive)
             {
-                 SceneManager.LoadScene("LoseScene");
+                 SceneManager.LoadScene("GameOver");
 
                 SaveDataController.Instance.DeleteData();
                
