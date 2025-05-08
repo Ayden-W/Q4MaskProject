@@ -45,10 +45,10 @@ public class Healthsystem
 
             if (!SaveDataController.Instance.Current.isAlive)
             {
-
+                 SceneManager.LoadScene("LoseScene");
 
                 SaveDataController.Instance.DeleteData();
-                SceneManager.LoadScene("LoseScene");
+               
 
 
             }
