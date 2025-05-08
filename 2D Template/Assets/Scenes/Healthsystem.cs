@@ -47,7 +47,7 @@ public class Healthsystem
             {
 
 
-
+                SaveDataController.Instance.DeleteData();
                 SceneManager.LoadScene("LoseScene");
 
 
