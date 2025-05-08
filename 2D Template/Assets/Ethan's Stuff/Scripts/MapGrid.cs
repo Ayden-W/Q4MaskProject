@@ -1,9 +1,11 @@
 
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class MapGrid : MonoBehaviour
 {
+    
     public AudioClip Click;
     public GameObject node;
     private float randomInt;
@@ -49,6 +51,7 @@ public class MapGrid : MonoBehaviour
             NodeList nodeList;
             NodeList nodeList2;
 
+            GetComponent<AudioSource>();
             int r = random.Next(0, 10);
             if (i == 9)
             {
@@ -59,8 +62,9 @@ public class MapGrid : MonoBehaviour
 
                 NodeList.list.Add(nodeList);
                 NodeList.list.Add(nodeList2);
-                nodeList.Click = Click;
-                nodeList2.Click = Click;
+                nodeList.GetComponent<AudioSource>().clip = Click;
+                nodeList2.GetComponent<AudioSource>().clip = Click;
+                
             }
             else if (r == 0)
             {
@@ -71,8 +75,8 @@ public class MapGrid : MonoBehaviour
 
                 NodeList.list.Add(nodeList);
                 NodeList.list.Add(nodeList2); 
-                nodeList.Click = Click;
-                nodeList2.Click = Click;
+                nodeList.GetComponent<AudioSource>().clip = Click;
+                nodeList2.GetComponent<AudioSource>().clip = Click;
             }
             else if (r  == 1)
             {
@@ -83,8 +87,8 @@ public class MapGrid : MonoBehaviour
 
                 NodeList.list.Add(nodeList);
                 NodeList.list.Add(nodeList2);
-                nodeList.Click = Click;
-                nodeList2.Click = Click;
+                nodeList.GetComponent<AudioSource>().clip = Click;
+                nodeList2.GetComponent<AudioSource>().clip = Click;
             }
             else if (r == 2)
             {
@@ -95,8 +99,8 @@ public class MapGrid : MonoBehaviour
 
                 NodeList.list.Add(nodeList);
                 NodeList.list.Add(nodeList2); 
-                nodeList.Click = Click;
-                nodeList2.Click = Click;
+                nodeList.GetComponent<AudioSource>().clip = Click;
+                nodeList2.GetComponent<AudioSource>().clip = Click;
             }
             else if (r == 3)
             {
@@ -107,8 +111,8 @@ public class MapGrid : MonoBehaviour
 
                 NodeList.list.Add(nodeList);
                 NodeList.list.Add(nodeList2);
-                nodeList.Click = Click;
-                nodeList2.Click = Click;
+                nodeList.GetComponent<AudioSource>().clip = Click;
+                nodeList2.GetComponent<AudioSource>().clip = Click;
             }
             else if (r == 4)
             {
@@ -119,8 +123,8 @@ public class MapGrid : MonoBehaviour
 
                 NodeList.list.Add(nodeList);
                 NodeList.list.Add(nodeList2);
-                nodeList.Click = Click;
-                nodeList2.Click = Click;
+                nodeList.GetComponent<AudioSource>().clip = Click;
+                nodeList2.GetComponent<AudioSource>().clip = Click;
             }
             else if (r == 5)
             {
@@ -131,8 +135,8 @@ public class MapGrid : MonoBehaviour
 
                 NodeList.list.Add(nodeList);
                 NodeList.list.Add(nodeList2);
-                nodeList.Click = Click;
-                nodeList2.Click = Click;
+                nodeList.GetComponent<AudioSource>().clip = Click;
+                nodeList2.GetComponent<AudioSource>().clip = Click;
             }
             else if (r == 6)
             {
@@ -143,8 +147,8 @@ public class MapGrid : MonoBehaviour
 
                 NodeList.list.Add(nodeList);
                 NodeList.list.Add(nodeList2);
-                nodeList.Click = Click;
-                nodeList2.Click = Click;
+                nodeList.GetComponent<AudioSource>().clip = Click;
+                nodeList2.GetComponent<AudioSource>().clip = Click;
             }
             else if (r == 7)
             {
@@ -155,8 +159,8 @@ public class MapGrid : MonoBehaviour
 
                 NodeList.list.Add(nodeList);
                 NodeList.list.Add(nodeList2);
-                nodeList.Click = Click;
-                nodeList2.Click = Click;
+                nodeList.GetComponent<AudioSource>().clip = Click;
+                nodeList2.GetComponent<AudioSource>().clip = Click;
             }   
             else if (r ==8)
             {
@@ -167,8 +171,8 @@ public class MapGrid : MonoBehaviour
 
                 NodeList.list.Add(nodeList);
                 NodeList.list.Add(nodeList2);
-                nodeList.Click = Click;
-                nodeList2.Click = Click;
+                nodeList.GetComponent<AudioSource>().clip = Click;
+                nodeList2.GetComponent<AudioSource>().clip = Click;
             }
             else
             {
@@ -179,8 +183,8 @@ public class MapGrid : MonoBehaviour
 
                 NodeList.list.Add(nodeList);
                 NodeList.list.Add(nodeList2);
-                nodeList.Click = Click;
-                nodeList2.Click = Click;
+                nodeList.GetComponent<AudioSource>().clip = Click;
+                nodeList2.GetComponent<AudioSource>().clip = Click;
             }
 
             /*LineRenderer lr = FindFirstObjectByType<LineRenderer>();*/ // Grabs the LineRenderer

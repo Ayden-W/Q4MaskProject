@@ -47,7 +47,9 @@ public class Healthsystem
             {
 
 
+
                 SceneManager.LoadScene("LoseScene");
+
 
             }
 

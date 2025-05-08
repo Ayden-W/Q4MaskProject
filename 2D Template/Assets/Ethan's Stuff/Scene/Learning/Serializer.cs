@@ -1,5 +1,6 @@
 
 using System.IO;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public static class Serializer
@@ -44,5 +45,18 @@ public static class Serializer
 
         Debug.Log($"Object wsa successfully loaded from {fullPath} as {value}");
         return value;
+    }
+    public static void Delete(string filename, string directory)
+    {
+        Directory.CreateDirectory(directory);
+
+        if (File.Exists(Path.Combine(directory, filename)))
+        {
+           File.Delete(Path.Combine(directory, filename));
+        }
+        else 
+        {
+            Debug.Log("Nah");
+        }
     }
 }
