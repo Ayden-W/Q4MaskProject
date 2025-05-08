@@ -10,6 +10,10 @@ public class CharacterBattle : MonoBehaviour
     private State state;
     private Vector3 slideTargetPosition;
     private Action OnSlideComplete;
+    public bool Isattacking;
+    public bool EnemyAtk = false;
+    public Animator Anim;
+    public Animator EnemyAnim;
     private enum State
     {
         Idle,
@@ -29,8 +33,7 @@ public class CharacterBattle : MonoBehaviour
 
             // set Anim and Texture
 
-            //characterBase.
-            //characterBase.GetMaterial().mainTexture=
+            
         }
         else
         {
@@ -43,7 +46,16 @@ public class CharacterBattle : MonoBehaviour
     }
     private void Update()
     {
-
+        if (EnemyAnim)
+        {
+            Anim.SetBool("EnemyAtk", EnemyAtk);
+        }
+        if (Anim)
+        {
+            Anim.SetBool("IsAttacking", Isattacking);
+            
+        }
+        
         Debug.Log(state);
         switch (state)
         {
@@ -74,6 +86,8 @@ public class CharacterBattle : MonoBehaviour
     //Melee attack
     public void Attack(CharacterBattle targetCharacterBattle, Action onAttackComplete)
     {
+        EnemyAtk = true;
+        Isattacking = true;
         GetPosition();
         Vector3 startingPosition = GetPosition();
         slideTargetPosition = targetCharacterBattle.GetPosition() + (GetPosition() - targetCharacterBattle.GetPosition()).normalized / 3f;
@@ -83,25 +97,30 @@ public class CharacterBattle : MonoBehaviour
             //Arrived and Attack target
             state = State.Busy2;
             Vector3 attackDir = (targetCharacterBattle.GetPosition() - GetPosition()).normalized;
-            //CharacterBase.PlayAnimAttack(attackDir, null, () => {
-            //characterBase.PlayAnimIdle(attackDir);
+
+            //Animation here
+            
             Debug.Log("Attack");
             healthSystem.Damage((int)SaveDataController.Instance.Current.damage);
-          
+           
 
-
+           
 
             //attack completed, Slide back
             SlideToPosition(startingPosition, () =>
             {
-                //slide back completed
 
+                //slide back completed
+                Isattacking = false;
                 state = State.Idle;
                 this.slideTargetPosition = targetCharacterBattle.GetPosition();
+                
                 onAttackComplete();
+                EnemyAtk = false;
                 return;
+               
             });
-            //});
+           
         });
 
     }
@@ -112,5 +131,6 @@ public class CharacterBattle : MonoBehaviour
         this.slideTargetPosition = position;
         this.OnSlideComplete = OnSlideComplete;
         state = State.Sliding;
+        
     }
 }

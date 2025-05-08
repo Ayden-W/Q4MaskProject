@@ -57,7 +57,7 @@ public class BattleHandler : MonoBehaviour
         //Enemy
         enemySystem = new Healthsystem(enemyHealth, enemyHealth);
         enemyHealth = enemySystem.health;
-        Transform HealthBartransform = Instantiate(PFHealthBar, new Vector3(0, 6), Quaternion.identity);
+        Transform HealthBartransform = Instantiate(PFHealthBar, new Vector3(0, 2), Quaternion.identity);
         HealthBar healthBar = HealthBartransform.GetComponent<HealthBar>();
         healthBar.Setup(enemySystem);
         enemySystem.SetupHealthBar();
@@ -67,7 +67,7 @@ public class BattleHandler : MonoBehaviour
            
         //Player
         playerSystem = new Healthsystem(SaveDataController.Instance.Current.health, SaveDataController.Instance.Current.maxHealth);
-        Transform HealthBartransform2 = Instantiate(PFHealthBar, new Vector3(0, -5), Quaternion.identity);
+        Transform HealthBartransform2 = Instantiate(PFHealthBar, new Vector3(0, -3), Quaternion.identity);
         HealthBar healthBar2 = HealthBartransform2.GetComponent<HealthBar>();
         healthBar2.Setup(playerSystem);
         playerSystem.SetupHealthBar();

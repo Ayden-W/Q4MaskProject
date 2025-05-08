@@ -46,9 +46,11 @@ public class Healthsystem
             if (!SaveDataController.Instance.Current.isAlive)
             {
 
-                SaveDataController.Instance.DeleteData();
-                SceneManager.LoadScene("Main menu");
-                
+
+
+                SceneManager.LoadScene("LoseScene");
+
+
             }
 
         }
