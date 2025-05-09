@@ -857,6 +857,7 @@ MonoBehaviour:
   Increased: 0
   enemyHealth: 100
   DeathScene: Main menu
+  EnemyDeath: {fileID: 0}
   PFHealthBar: {fileID: 3198604661988604405, guid: 6af9a020ac416984da40363a46044b8c, type: 3}
 --- !u!1 &850638001
 GameObject:
@@ -1897,7 +1898,7 @@ Transform:
   m_GameObject: {fileID: 2027878419}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 102.91}
   m_LocalScale: {x: 35.37469, y: 27.56295, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
