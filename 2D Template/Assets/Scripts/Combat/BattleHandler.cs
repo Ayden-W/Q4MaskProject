@@ -22,7 +22,7 @@ public class BattleHandler : MonoBehaviour
     public Healthsystem Heal;
     public string DeathScene = "Main menu";
     private State state;
-
+    public AudioClip EnemyDeath;
     private IronMaden IronMaden;
 
     public Healthsystem enemySystem;
